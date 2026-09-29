@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Imóvel · Imobiliária José Amim Alexandre</title>
+  <link rel="icon" href="assets/logo.jpg" type="image/jpeg">
+  <meta name="description" content="Anúncio de exemplo da Imobiliária José Amim Alexandre, em Conchas. A carteira real entra quando for enviada.">
+  <meta name="robots" content="noindex,follow">
+  <meta property="og:locale" content="pt_BR">
+  <meta property="og:type" content="article">
+  <meta property="og:site_name" content="Imobiliária José Amim Alexandre">
+  <meta property="og:title" content="Imóvel · Imobiliária José Amim Alexandre">
+  <meta property="og:description" content="Anúncio de exemplo da Imobiliária José Amim Alexandre, em Conchas. A carteira real entra quando for enviada.">
+  <meta property="og:image" content="assets/logo.jpg">
+  <meta property="og:url" content="">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body class="pagina-imovel">
+  <header class="topo solido">
+    <a class="marca" href="index.html">
+      <img src="assets/logo.jpg" alt="Imobiliária José Amim Alexandre" width="64" height="64">
+    </a>
+    <div class="topo__acoes">
+      <a class="telefone" href="tel:+5514981066430">(14) 98106-6430</a>
+      <button class="menu-botao" type="button" aria-expanded="false" aria-controls="menu-site">
+        <span class="sr">Menu</span>
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </header>
+
+  <nav class="gaveta" id="menu-site" hidden>
+    <a href="index.html">Início</a>
+    <a href="index.html#imoveis">Imóveis</a>
+    <a href="index.html#imobiliaria">A imobiliária</a>
+    <a href="#contato">Contato</a>
+  </nav>
+
+  <main class="ficha" id="ficha"></main>
+
+  <footer class="contato" id="contato">
+    <div class="miolo contato__grade">
+      <div>
+        <h2>Imobiliária José Amim Alexandre</h2>
+        <p>Corretor de imóveis CRECI 31.552-F</p>
+        <p>Mais de 40 anos no mercado em Conchas.</p>
+      </div>
+      <div>
+        <h3>Endereço</h3>
+        <p><a href="https://maps.google.com/?q=Rua+S%C3%A3o+Paulo,+309+-+Centro,+Conchas+-+SP">Rua São Paulo, 309 - Centro, Conchas - SP</a></p>
+        <p><a href="tel:+5514981066430">(14) 98106-6430</a></p>
+      </div>
+      <div>
+        <h3>No site</h3>
+        <p><a href="index.html#imoveis">Imóveis</a></p>
+        <p><a href="index.html#imobiliaria">A imobiliária</a></p>
+        <p><a href="index.html#avaliar">Avaliar imóvel</a></p>
+        <p><a href="index.html#financiamento">Financiamento</a></p>
+      </div>
+      <div>
+        <h3>Instagram</h3>
+        <p><a href="https://www.instagram.com/joseamimalexandre/" target="_blank" rel="noopener">joseamimalexandre</a></p>
+      </div>
+    </div>
+    <div class="miolo direitos">
+      <p>© 2026 Imobiliária José Amim Alexandre. Todos os direitos reservados.</p>
+      <p><a href="politica-de-privacidade.html">Política de privacidade</a></p>
+      <p>Desenvolvido por <a href="https://www.msdigitais.com.br" target="_blank" rel="noopener noreferrer">www.msdigitais.com.br</a></p>
+    </div>
+  </footer>
+
+  <script>
+    const imoveis = {
+      "casa-centro": {
+        titulo: "Casa no Centro",
+        operacao: "Alugar",
+        tipo: "Casa",
+        cidade: "Conchas",
+        imagens: [
+          { src: "assets/casa.jpg", alt: "Casa de tijolo com gramado no Centro de Conchas" }
+        ],
+        descricao: "Casa para alugar no Centro de Conchas, com três quartos e quintal. O imóvel fica perto do comércio e dos serviços da cidade, em uma quadra residencial. A sala se abre para a área externa, e a cozinha atende o uso do dia a dia. Os quartos cabem cama de casal ou duas camas de solteiro. O quintal tem espaço para varal, horta pequena e o lazer da família. A locação é acompanhada pela imobiliária, da visita à entrega das chaves."
+      },
+      "casa-perto-centro": {
+        titulo: "Casa perto do Centro",
+        operacao: "Alugar",
+        tipo: "Casa",
+        cidade: "Conchas",
+        imagens: [
+          { src: "assets/comercial.jpg", alt: "Casa clara com varanda perto do Centro" }
+        ],
+        descricao: "Casa para alugar a poucos minutos do Centro, com dois quartos e garagem. A varanda cobre a entrada e a sala recebe a luz da tarde. A cozinha fica integrada ao corredor que leva aos quartos e ao banheiro. A garagem cabe um carro e ainda sobra um recuo para moto ou bicicleta. Serve bem para quem trabalha na cidade e quer chegar a pé ao comércio, sem abrir mão de uma casa térrea."
+      },
+      "vila-santa-rita": {
+        titulo: "Casa em Vila Santa Rita",
+        operacao: "Comprar",
+        tipo: "Casa",
+        cidade: "Conchas",
+        imagens: [
+          { src: "assets/fachada.jpg", alt: "Casas com telhado e quintal em Vila Santa Rita" }
+        ],
+        descricao: "Casa à venda em Vila Santa Rita, pronta para morar. O telhado, a fachada e o quintal já estão em uso, sem obra pendente para a mudança. A planta separa a sala da área íntima e deixa o quintal nos fundos, com muro e acesso lateral. O bairro é residencial, com ruas calmas e ligação rápida com o Centro de Conchas. A documentação e a visita são tratadas direto com José Amim Alexandre."
+      },
+      "terreno-tomazela": {
+        titulo: "Terreno em Tomazela",
+        operacao: "Comprar",
+        tipo: "Terreno/área",
+        cidade: "Conchas",
+        imagens: [
+          { src: "assets/terreno.jpg", alt: "Terreno aberto em Tomazela" }
+        ],
+        descricao: "Lote residencial à venda em Tomazela, em Conchas. O terreno é plano o bastante para uma casa térrea, com frente para a rua e fundos livres para quintal. A região mistura moradias e áreas abertas, típicas do interior. Dá para construir no ritmo da família ou segurar o lote como reserva. A escritura e as medidas do lote são conferidas antes da proposta."
+      },
+      "chacara-rural": {
+        titulo: "Chácara na zona rural",
+        operacao: "Comprar",
+        tipo: "Chácara",
+        cidade: "Conchas",
+        imagens: [
+          { src: "assets/chacara.jpg", alt: "Campo verde com casa ao fundo na zona rural" }
+        ],
+        descricao: "Chácara à venda na zona rural de Conchas, com casa sede e área verde. O campo em volta cabe pomar, pasto curto ou só o descanso do fim de semana. A sede cobre a moradia principal, e o acesso é por estrada rural a partir da cidade. É o tipo de imóvel de quem quer sair do lote urbano sem perder o contato com Conchas. A visita é marcada com antecedência para percorrer a área inteira."
+      },
+      "casa-permuta": {
+        titulo: "Casa aceita troca",
+        operacao: "Permuta",
+        tipo: "Casa",
+        cidade: "Conchas",
+        imagens: [
+          { src: "assets/casa.jpg", alt: "Fachada da casa que aceita permuta" }
+        ],
+        descricao: "Casa em Conchas que aceita permuta. A troca entra quando a venda direta não fecha a conta: o imóvel de quem chega pode compor a entrada, e a diferença é acertada à parte. A casa tem uso residencial e fica na cidade, não na zona rural. A imobiliária organiza os dois lados, confere a documentação de cada um e só segue quando os dois concordam com o que entra na troca."
+      }
+    };
+
+    (function () {
+      const url = new URL(location.href);
+      url.hash = "";
+      const canonica = document.createElement("link");
+      canonica.rel = "canonical";
+      canonica.href = url.href;
+      document.head.appendChild(canonica);
+      document.querySelector('meta[property="og:url"]').content = url.href;
+      const imagem = document.querySelector('meta[property="og:image"]');
+      imagem.content = new URL(imagem.content, location.href).href;
+    })();
+
+    const params = new URLSearchParams(location.search);
+    const imovel = imoveis[params.get("id")];
+    const ficha = document.querySelector("#ficha");
+
+    if (!imovel) {
+      document.title = "Imóvel não encontrado · Imobiliária José Amim Alexandre";
+      document.querySelector('meta[name="description"]').content = "Esse anúncio não está na vitrine da Imobiliária José Amim Alexandre, em Conchas.";
+      ficha.innerHTML = '<a class="voltar" href="index.html#imoveis">Voltar aos imóveis</a><h1>Imóvel não encontrado</h1><p class="ficha__texto">Esse anúncio não está na vitrine. Volte e escolha outro card.</p>';
+    } else {
+      document.title = imovel.titulo + " em " + imovel.cidade + " · Imobiliária José Amim Alexandre";
+      const resumoBruto = imovel.titulo + " em " + imovel.cidade + ". " + imovel.operacao + ", " + imovel.tipo + ". " + imovel.descricao;
+      const resumo = resumoBruto.length > 155 ? resumoBruto.slice(0, 155).replace(/\s+\S*$/, "") + "…" : resumoBruto;
+      document.querySelector('meta[name="description"]').content = resumo;
+      document.querySelector('meta[property="og:title"]').content = document.title;
+      document.querySelector('meta[property="og:description"]').content = resumo;
+      document.querySelector('meta[property="og:image"]').content = new URL(imovel.imagens[0].src, location.href).href;
+      const textoWhats = encodeURIComponent("Olá, quero saber sobre " + imovel.titulo + " em " + imovel.cidade + ".");
+      ficha.innerHTML = [
+        '<a class="voltar" href="index.html#imoveis">Voltar aos imóveis</a>',
+        '<div class="galeria">',
+        '<img class="galeria__destaque" alt="">',
+        '<div class="galeria__miniaturas"></div>',
+        "</div>",
+        "<h1></h1>",
+        '<p class="ficha__meta"></p>',
+        '<p class="ficha__texto"></p>',
+        '<a class="botao" href="https://wa.me/5514981066430?text=' + textoWhats + '">Falar sobre este imóvel</a>'
+      ].join("");
+      ficha.querySelector("h1").textContent = imovel.titulo;
+      ficha.querySelector(".ficha__meta").textContent = imovel.operacao + " · " + imovel.tipo + " · " + imovel.cidade;
+      ficha.querySelector(".ficha__texto").textContent = imovel.descricao;
+
+      const destaque = ficha.querySelector(".galeria__destaque");
+      const faixa = ficha.querySelector(".galeria__miniaturas");
+
+      function mostrar(indice) {
+        const foto = imovel.imagens[indice];
+        destaque.src = foto.src;
+        destaque.alt = foto.alt;
+        faixa.querySelectorAll("button").forEach((botaoFoto, posicao) => {
+          botaoFoto.classList.toggle("ativa", posicao === indice);
+        });
+      }
+
+      imovel.imagens.forEach((foto, indice) => {
+        const botaoFoto = document.createElement("button");
+        botaoFoto.type = "button";
+        botaoFoto.innerHTML = '<img alt="">';
+        botaoFoto.querySelector("img").src = foto.src;
+        botaoFoto.querySelector("img").alt = foto.alt;
+        botaoFoto.addEventListener("click", () => mostrar(indice));
+        faixa.appendChild(botaoFoto);
+      });
+      mostrar(0);
+    }
+
+    const botao = document.querySelector(".menu-botao");
+    const gaveta = document.querySelector(".gaveta");
+    function fecharMenu() {
+      botao.setAttribute("aria-expanded", "false");
+      gaveta.hidden = true;
+    }
+
+    botao.addEventListener("click", () => {
+      const aberto = botao.getAttribute("aria-expanded") === "true";
+      botao.setAttribute("aria-expanded", String(!aberto));
+      gaveta.hidden = aberto;
+    });
+    gaveta.addEventListener("click", (evento) => {
+      if (evento.target.closest("a")) fecharMenu();
+    });
+    document.addEventListener("click", (evento) => {
+      if (gaveta.hidden) return;
+      if (evento.target.closest(".gaveta") || evento.target.closest(".menu-botao")) return;
+      fecharMenu();
+    });
+  </script>
+  <a class="whatsapp" href="https://wa.me/5514981066430?text=Ol%C3%A1%2C%20quero%20falar%20com%20a%20imobili%C3%A1ria." target="_blank" rel="noopener noreferrer" aria-label="Falar no WhatsApp">
+    <svg viewBox="0 0 32 32" aria-hidden="true">
+      <path fill="#fff" d="M16.01 3.2C8.95 3.2 3.21 8.93 3.21 16c0 2.25.59 4.45 1.71 6.39L3.2 28.8l6.58-1.72a12.8 12.8 0 0 0 6.23 1.59h.01c7.06 0 12.8-5.74 12.8-12.8 0-3.42-1.33-6.63-3.75-9.05a12.72 12.72 0 0 0-9.06-3.62zm0 23.36h-.01a10.6 10.6 0 0 1-5.4-1.48l-.39-.23-3.9 1.02 1.04-3.8-.25-.39a10.57 10.57 0 0 1-1.62-5.64c0-5.85 4.76-10.61 10.62-10.61 2.83 0 5.49 1.1 7.49 3.11a10.53 10.53 0 0 1 3.1 7.5c0 5.85-4.76 10.62-10.68 10.62z"/>
+      <path fill="#fff" d="M19.11 17.47c-.27-.14-1.6-.79-1.85-.88-.25-.09-.43-.14-.61.14-.18.27-.7.88-.86 1.06-.16.18-.32.2-.59.07-.27-.14-1.14-.42-2.17-1.34-.8-.71-1.34-1.59-1.5-1.86-.16-.27-.02-.41.12-.55.12-.12.27-.32.41-.48.14-.16.18-.27.27-.45.09-.18.05-.34-.02-.48-.07-.14-.61-1.47-.84-2.01-.22-.53-.45-.46-.61-.46h-.52c-.18 0-.48.07-.73.34-.25.27-.96.94-.96 2.29s.98 2.66 1.12 2.84c.14.18 1.93 2.95 4.68 4.14.65.28 1.16.45 1.56.58.65.21 1.25.18 1.72.11.53-.08 1.6-.65 1.83-1.28.23-.63.23-1.17.16-1.28-.07-.11-.25-.18-.52-.32z"/>
+    </svg>
+  </a>
+</body>
+</html>

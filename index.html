@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Imobiliária José Amim Alexandre · Mais de 40 anos no mercado</title>
+  <link rel="icon" href="assets/logo.jpg" type="image/jpeg">
+  <meta name="description" content="Imobiliária José Amim Alexandre em Conchas, SP. Mais de 40 anos no mercado. Aluguel, compra, permuta, avaliação e financiamento. CRECI 31.552-F.">
+  <meta name="robots" content="index,follow">
+  <meta property="og:locale" content="pt_BR">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Imobiliária José Amim Alexandre">
+  <meta property="og:title" content="Imobiliária José Amim Alexandre · Mais de 40 anos no mercado">
+  <meta property="og:description" content="Imobiliária José Amim Alexandre em Conchas, SP. Mais de 40 anos no mercado. Aluguel, compra, permuta, avaliação e financiamento. CRECI 31.552-F.">
+  <meta property="og:image" content="assets/logo.jpg">
+  <meta property="og:url" content="">
+  <meta name="twitter:card" content="summary">
+  <script type="application/ld+json" id="dados-imobiliaria">
+  {
+    "@context": "https://schema.org",
+    "@type": "RealEstateAgent",
+    "name": "Imobiliária José Amim Alexandre",
+    "description": "Corretor de imóveis em Conchas, SP, com mais de 40 anos no mercado. Aluguel, compra, permuta, avaliação e financiamento. CRECI 31.552-F.",
+    "telephone": "+5514981066430",
+    "image": "assets/logo.jpg",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Rua São Paulo, 309",
+      "addressLocality": "Conchas",
+      "addressRegion": "SP",
+      "addressCountry": "BR"
+    },
+    "areaServed": ["Conchas", "Pereiras", "Laranjal Paulista"],
+    "sameAs": "https://www.instagram.com/joseamimalexandre/"
+  }
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="topo">
+    <a class="marca" href="#inicio">
+      <img src="assets/logo.jpg" alt="Imobiliária José Amim Alexandre" width="64" height="64">
+    </a>
+    <div class="topo__acoes">
+      <a class="telefone" href="tel:+5514981066430">(14) 98106-6430</a>
+      <button class="menu-botao" type="button" aria-expanded="false" aria-controls="menu-site">
+        <span class="sr">Menu</span>
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </header>
+
+  <nav class="gaveta" id="menu-site" hidden>
+    <a href="#inicio">Início</a>
+    <a href="#imoveis">Imóveis</a>
+    <a href="#imobiliaria">A imobiliária</a>
+    <a href="#contato">Contato</a>
+    <a href="#avaliar">Avaliar imóvel</a>
+    <a href="#financiamento">Financiamento</a>
+    <a href="#contato">Falar com a imobiliária</a>
+  </nav>
+
+  <main>
+  <section class="hero" id="inicio">
+    <video class="hero__video" autoplay muted loop playsinline poster="assets/fachada.jpg" aria-hidden="true">
+      <source src="assets/video-fachada.mp4" type="video/mp4">
+    </video>
+    <div class="hero__conteudo">
+      <h1>Mais de 40 anos no mercado</h1>
+      <p class="apoio">Imobiliária José Amim Alexandre · Conchas</p>
+
+      <div class="acoes">
+        <label class="sr" for="operacao">Operação</label>
+        <select id="operacao" name="operacao">
+          <option value="alugar">Alugar</option>
+          <option value="comprar">Comprar</option>
+          <option value="permuta">Permuta</option>
+        </select>
+        <label class="sr" for="tipo">Tipo de imóvel</label>
+        <select id="tipo" name="tipo">
+          <option>Apartamento</option>
+          <option>Área comercial</option>
+          <option>Casa</option>
+          <option>Casa comercial</option>
+          <option>Chácara</option>
+          <option>Galpão</option>
+          <option>Lote</option>
+          <option>Prédio</option>
+          <option>Prédio comercial</option>
+          <option>Sala</option>
+          <option>Salão</option>
+          <option>Sítio</option>
+          <option>Terreno/área</option>
+        </select>
+        <label class="sr" for="cidade">Cidade</label>
+        <select id="cidade" name="cidade">
+          <option>Conchas</option>
+          <option>Pereiras</option>
+          <option>Laranjal Paulista</option>
+        </select>
+      </div>
+
+      <nav class="faixa" aria-label="Outros serviços">
+        <a href="#avaliar">Avaliar imóvel</a>
+        <a href="#financiamento">Financiamento</a>
+        <a href="#contato">Falar com a imobiliária</a>
+      </nav>
+    </div>
+  </section>
+
+  <section class="bloco" id="imoveis">
+    <div class="miolo">
+      <p class="olho">Imóveis em Conchas</p>
+      <h2>Escolha por onde começar</h2>
+      <div class="filtros" role="tablist" aria-label="Filtrar imóveis">
+        <button type="button" id="alugar" data-filtro="alugar">Alugar</button>
+        <button type="button" id="comprar" data-filtro="comprar">Comprar</button>
+        <button type="button" id="permuta" data-filtro="permuta">Permuta</button>
+        <button type="button" data-filtro="todos" class="ativo">Todos</button>
+      </div>
+      <div class="grade">
+        <a class="card" data-op="alugar" href="imovel.html?id=casa-centro">
+          <img src="assets/casa.jpg" alt="Casa para alugar no Centro de Conchas, com quintal">
+          <div class="card__corpo">
+            <p class="selo">Alugar</p>
+            <h3>Casa no Centro</h3>
+            <p>3 quartos · quintal · Conchas</p>
+          </div>
+        </a>
+        <a class="card" data-op="alugar" href="imovel.html?id=casa-perto-centro">
+          <img src="assets/comercial.jpg" alt="Casa para alugar perto do Centro de Conchas">
+          <div class="card__corpo">
+            <p class="selo">Alugar</p>
+            <h3>Casa perto do Centro</h3>
+            <p>2 quartos · garagem · Conchas</p>
+          </div>
+        </a>
+        <a class="card" data-op="comprar" href="imovel.html?id=vila-santa-rita">
+          <img src="assets/fachada.jpg" alt="Casa à venda em Vila Santa Rita, Conchas">
+          <div class="card__corpo">
+            <p class="selo">Comprar</p>
+            <h3>Casa em Vila Santa Rita</h3>
+            <p>Pronta para morar · Conchas</p>
+          </div>
+        </a>
+        <a class="card" data-op="comprar" href="imovel.html?id=terreno-tomazela">
+          <img src="assets/terreno.jpg" alt="Terreno à venda em Tomazela, Conchas">
+          <div class="card__corpo">
+            <p class="selo">Comprar</p>
+            <h3>Terreno em Tomazela</h3>
+            <p>Lote residencial · Conchas</p>
+          </div>
+        </a>
+        <a class="card" data-op="comprar" href="imovel.html?id=chacara-rural">
+          <img src="assets/chacara.jpg" alt="Chácara à venda na zona rural de Conchas">
+          <div class="card__corpo">
+            <p class="selo">Comprar</p>
+            <h3>Chácara na zona rural</h3>
+            <p>Casa sede · área verde · Conchas</p>
+          </div>
+        </a>
+        <a class="card" data-op="permuta" href="imovel.html?id=casa-permuta">
+          <img src="assets/casa.jpg" alt="Casa em Conchas que aceita permuta">
+          <div class="card__corpo">
+            <p class="selo">Permuta</p>
+            <h3>Casa aceita troca</h3>
+            <p>Permuta de imóvel · Conchas</p>
+          </div>
+        </a>
+      </div>
+      <p class="nota-exemplo">Os anúncios acima são exemplos de vitrine. Os imóveis e valores reais entram quando você enviar a carteira.</p>
+    </div>
+  </section>
+
+  <section class="bloco bloco--claro" id="tipos">
+    <div class="miolo">
+      <p class="olho">O que se procura em Conchas</p>
+      <h2>Casa, terreno, chácara e ponto</h2>
+      <div class="tipos">
+        <a href="#comprar">Casas</a>
+        <a href="#comprar">Terrenos</a>
+        <a href="#comprar">Chácaras e sítios</a>
+        <a href="#alugar">Imóvel comercial</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="bloco sobre" id="imobiliaria">
+    <div class="miolo sobre__grade">
+      <div>
+        <p class="olho">A imobiliária</p>
+        <h2>Quem conhece Conchas há mais de 40 anos</h2>
+        <p>José Amim Alexandre acompanha famílias da cidade na compra, no aluguel e na troca de imóvel. O atendimento é direto, no Centro, com o tempo de quem já viu o mercado local mudar.</p>
+        <p>Corretor de imóveis CRECI 31.552-F.</p>
+      </div>
+      <ul class="marcos">
+        <li><strong>40+</strong><span>anos no mercado</span></li>
+        <li><strong>Conchas</strong><span>e a região</span></li>
+        <li><strong>3 caminhos</strong><span>alugar, comprar ou permutar</span></li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="bloco bloco--claro" id="servicos">
+    <div class="miolo">
+      <p class="olho">Serviços</p>
+      <h2>Além de achar o imóvel</h2>
+      <div class="servicos">
+        <article id="avaliar">
+          <h3>Avaliar imóvel</h3>
+          <p>Uma leitura do valor com base no que se vende e se aluga em Conchas, antes de anunciar ou negociar.</p>
+          <a href="https://wa.me/5514981066430?text=Olá,%20quero%20avaliar%20um%20imóvel%20em%20Conchas.">Pedir avaliação</a>
+        </article>
+        <article id="financiamento">
+          <h3>Financiamento</h3>
+          <p>Orientação para quem vai comprar e precisa entender entrada, parcelas e documentos.</p>
+          <a href="https://wa.me/5514981066430?text=Olá,%20quero%20orientação%20sobre%20financiamento.">Falar sobre financiamento</a>
+        </article>
+        <article>
+          <h3>Permuta</h3>
+          <p>Troca de imóvel quando a venda direta não fecha a conta. A gente organiza os dois lados.</p>
+          <a href="#permuta">Ver permutas</a>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="bloco" id="atuacao">
+    <div class="miolo">
+      <p class="olho">Onde atuamos</p>
+      <h2>Conchas e os arredores</h2>
+      <ul class="bairros">
+        <li>Centro</li>
+        <li>Tomazela</li>
+        <li>Vila Santa Rita</li>
+        <li>Cidade Feliz</li>
+        <li>Zona rural</li>
+      </ul>
+    </div>
+  </section>
+  </main>
+
+  <footer class="contato" id="contato">
+    <div class="miolo contato__grade">
+      <div>
+        <h2>Imobiliária José Amim Alexandre</h2>
+        <p>Corretor de imóveis CRECI 31.552-F</p>
+        <p>Mais de 40 anos no mercado em Conchas.</p>
+      </div>
+      <div>
+        <h3>Endereço</h3>
+        <p><a href="https://maps.google.com/?q=Rua+S%C3%A3o+Paulo,+309+-+Centro,+Conchas+-+SP">Rua São Paulo, 309 - Centro, Conchas - SP</a></p>
+        <p><a href="tel:+5514981066430">(14) 98106-6430</a></p>
+      </div>
+      <div>
+        <h3>No site</h3>
+        <p><a href="#imoveis">Imóveis</a></p>
+        <p><a href="#imobiliaria">A imobiliária</a></p>
+        <p><a href="#avaliar">Avaliar imóvel</a></p>
+        <p><a href="#financiamento">Financiamento</a></p>
+      </div>
+      <div>
+        <h3>Instagram</h3>
+        <p><a href="https://www.instagram.com/joseamimalexandre/" target="_blank" rel="noopener">joseamimalexandre</a></p>
+      </div>
+    </div>
+    <div class="miolo direitos">
+      <p>© 2026 Imobiliária José Amim Alexandre. Todos os direitos reservados.</p>
+      <p><a href="politica-de-privacidade.html">Política de privacidade</a></p>
+      <p>Desenvolvido por <a href="https://www.msdigitais.com.br" target="_blank" rel="noopener noreferrer">www.msdigitais.com.br</a></p>
+    </div>
+  </footer>
+
+  <script>
+    (function () {
+      const url = new URL(location.href);
+      url.hash = "";
+      url.search = "";
+      url.pathname = url.pathname.replace(/index\.html$/, "");
+      const canonica = document.createElement("link");
+      canonica.rel = "canonical";
+      canonica.href = url.href;
+      document.head.appendChild(canonica);
+      document.querySelector('meta[property="og:url"]').content = url.href;
+      const imagem = document.querySelector('meta[property="og:image"]');
+      imagem.content = new URL(imagem.content, location.href).href;
+      const dados = document.querySelector("#dados-imobiliaria");
+      const json = JSON.parse(dados.textContent);
+      json.url = url.href;
+      json.image = new URL("assets/logo.jpg", location.href).href;
+      dados.textContent = JSON.stringify(json);
+    })();
+
+    const botao = document.querySelector(".menu-botao");
+    const gaveta = document.querySelector(".gaveta");
+
+    function fecharMenu() {
+      botao.setAttribute("aria-expanded", "false");
+      gaveta.hidden = true;
+    }
+
+    botao.addEventListener("click", () => {
+      const aberto = botao.getAttribute("aria-expanded") === "true";
+      botao.setAttribute("aria-expanded", String(!aberto));
+      gaveta.hidden = aberto;
+    });
+
+    gaveta.addEventListener("click", (evento) => {
+      if (evento.target.closest("a")) fecharMenu();
+    });
+
+    document.addEventListener("click", (evento) => {
+      if (gaveta.hidden) return;
+      if (evento.target.closest(".gaveta") || evento.target.closest(".menu-botao")) return;
+      fecharMenu();
+    });
+
+    const topo = document.querySelector(".topo");
+    const atualizarTopo = () => topo.classList.toggle("solido", window.scrollY > 40);
+    atualizarTopo();
+    window.addEventListener("scroll", atualizarTopo, { passive: true });
+
+    const filtros = document.querySelectorAll("[data-filtro]");
+    const cards = document.querySelectorAll(".card");
+
+    function aplicar(op) {
+      filtros.forEach((botaoFiltro) => {
+        botaoFiltro.classList.toggle("ativo", botaoFiltro.dataset.filtro === op);
+      });
+      cards.forEach((card) => {
+        card.hidden = op !== "todos" && card.dataset.op !== op;
+      });
+    }
+
+    filtros.forEach((botaoFiltro) => {
+      botaoFiltro.addEventListener("click", () => {
+        aplicar(botaoFiltro.dataset.filtro);
+        if (botaoFiltro.dataset.filtro !== "todos") {
+          document.querySelector("#operacao").value = botaoFiltro.dataset.filtro;
+        }
+      });
+    });
+
+    document.querySelector("#operacao").addEventListener("change", (evento) => {
+      aplicar(evento.target.value);
+      document.querySelector("#imoveis").scrollIntoView({ behavior: "smooth" });
+    });
+
+    function peloHash() {
+      const nome = location.hash.replace("#", "");
+      if (nome === "alugar" || nome === "comprar" || nome === "permuta") {
+        aplicar(nome);
+        document.querySelector("#operacao").value = nome;
+      }
+    }
+
+    window.addEventListener("hashchange", peloHash);
+    peloHash();
+  </script>
+  <a class="whatsapp" href="https://wa.me/5514981066430?text=Ol%C3%A1%2C%20quero%20falar%20com%20a%20imobili%C3%A1ria." target="_blank" rel="noopener noreferrer" aria-label="Falar no WhatsApp">
+    <svg viewBox="0 0 32 32" aria-hidden="true">
+      <path fill="#fff" d="M16.01 3.2C8.95 3.2 3.21 8.93 3.21 16c0 2.25.59 4.45 1.71 6.39L3.2 28.8l6.58-1.72a12.8 12.8 0 0 0 6.23 1.59h.01c7.06 0 12.8-5.74 12.8-12.8 0-3.42-1.33-6.63-3.75-9.05a12.72 12.72 0 0 0-9.06-3.62zm0 23.36h-.01a10.6 10.6 0 0 1-5.4-1.48l-.39-.23-3.9 1.02 1.04-3.8-.25-.39a10.57 10.57 0 0 1-1.62-5.64c0-5.85 4.76-10.61 10.62-10.61 2.83 0 5.49 1.1 7.49 3.11a10.53 10.53 0 0 1 3.1 7.5c0 5.85-4.76 10.62-10.68 10.62z"/>
+      <path fill="#fff" d="M19.11 17.47c-.27-.14-1.6-.79-1.85-.88-.25-.09-.43-.14-.61.14-.18.27-.7.88-.86 1.06-.16.18-.32.2-.59.07-.27-.14-1.14-.42-2.17-1.34-.8-.71-1.34-1.59-1.5-1.86-.16-.27-.02-.41.12-.55.12-.12.27-.32.41-.48.14-.16.18-.27.27-.45.09-.18.05-.34-.02-.48-.07-.14-.61-1.47-.84-2.01-.22-.53-.45-.46-.61-.46h-.52c-.18 0-.48.07-.73.34-.25.27-.96.94-.96 2.29s.98 2.66 1.12 2.84c.14.18 1.93 2.95 4.68 4.14.65.28 1.16.45 1.56.58.65.21 1.25.18 1.72.11.53-.08 1.6-.65 1.83-1.28.23-.63.23-1.17.16-1.28-.07-.11-.25-.18-.52-.32z"/>
+    </svg>
+  </a>
+</body>
+</html>
