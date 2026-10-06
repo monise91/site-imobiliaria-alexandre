@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Imóvel · Imobiliária José Amim Alexandre</title>
+  <link rel="icon" href="assets/logo.png" type="image/png">
+  <meta name="description" content="Imóveis à venda da Imobiliária José Amim Alexandre em Conchas, SP.">
+  <meta name="robots" content="index,follow">
+  <meta property="og:locale" content="pt_BR">
+  <meta property="og:type" content="article">
+  <meta property="og:site_name" content="Imobiliária José Amim Alexandre">
+  <meta property="og:title" content="Imóvel · Imobiliária José Amim Alexandre">
+  <meta property="og:description" content="Imóveis à venda da Imobiliária José Amim Alexandre em Conchas, SP.">
+  <meta property="og:image" content="assets/logo.png">
+  <meta property="og:url" content="">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body class="pagina-imovel">
+  <header class="topo">
+    <a class="marca" href="index.html">
+      <img src="assets/logo-marca.png" alt="Imobiliária José Amim Alexandre" width="131" height="56">
+    </a>
+    <nav class="menu" aria-label="Principal">
+      <a href="index.html#comprar">Comprar</a>
+      <a href="index.html#alugar">Alugar</a>
+      <a href="index.html#anunciar">Anunciar imóvel</a>
+      <a href="index.html#financiamento">Financiamento</a>
+      <a href="index.html#imobiliaria">Sobre nós</a>
+      <a href="index.html#contato">Contato</a>
+    </nav>
+    <div class="topo__acoes">
+      <a class="telefone zap" href="https://wa.me/5514981066430?text=Ol%C3%A1%2C%20quero%20falar%20com%20a%20imobili%C3%A1ria." target="_blank" rel="noopener noreferrer">(14) 98106-6430</a>
+      <button class="menu-botao" type="button" aria-expanded="false" aria-controls="menu-site">
+        <span class="sr">Menu</span>
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </header>
+
+  <nav class="gaveta" id="menu-site" hidden>
+    <a href="index.html#comprar">Comprar</a>
+    <a href="index.html#alugar">Alugar</a>
+    <a href="index.html#anunciar">Anunciar imóvel</a>
+    <a href="index.html#financiamento">Financiamento</a>
+    <a href="index.html#imobiliaria">Sobre nós</a>
+    <a href="index.html#contato">Contato</a>
+  </nav>
+
+  <main class="ficha" id="ficha"></main>
+
+  <footer class="contato" id="contato">
+    <div class="miolo contato__grade">
+      <div>
+        <a class="marca" href="index.html">
+          <img src="assets/logo-marca.png" alt="Imobiliária José Amim Alexandre" width="131" height="56">
+        </a>
+        <p>Corretor de imóveis CRECI 31.552-F</p>
+        <p>Mais de 40 anos no mercado em Conchas.</p>
+      </div>
+      <div>
+        <h3>Endereço</h3>
+        <p><a href="https://maps.google.com/?q=Rua+S%C3%A3o+Paulo,+309+-+Centro,+Conchas+-+SP">Rua São Paulo, 309 - Centro, Conchas - SP</a></p>
+        <p><a href="tel:+5514981066430">(14) 98106-6430</a></p>
+        <p><a class="zap" href="https://wa.me/5514981066430?text=Ol%C3%A1%2C%20quero%20falar%20com%20a%20imobili%C3%A1ria." target="_blank" rel="noopener noreferrer">WhatsApp</a></p>
+      </div>
+      <div>
+        <h3>No site</h3>
+        <p><a href="index.html#comprar">Comprar</a></p>
+        <p><a href="index.html#alugar">Alugar</a></p>
+        <p><a href="index.html#anunciar">Anunciar imóvel</a></p>
+        <p><a href="index.html#financiamento">Financiamento</a></p>
+        <p><a href="index.html#imobiliaria">Sobre nós</a></p>
+        <p><a href="index.html#contato">Contato</a></p>
+      </div>
+      <div>
+        <h3>Instagram</h3>
+        <p><a href="https://www.instagram.com/joseamimalexandre/" target="_blank" rel="noopener">joseamimalexandre</a></p>
+      </div>
+    </div>
+    <div class="miolo direitos">
+      <p>© 2026 Imobiliária José Amim Alexandr<span class="marca-e" title="Marca registrada">e</span>. Todos os direitos reservados.</p>
+      <p><a href="politica-de-privacidade.html">Política de privacidade</a></p>
+      <p>Desenvolvido por <a href="https://www.msdigitais.com.br" target="_blank" rel="noopener noreferrer">www.msdigitais.com.br</a></p>
+    </div>
+  </footer>
+
+  <script>
+    const imoveis = {
+      "turmalina": {
+        titulo: "Casa no Joanin Parise",
+        operacao: "Comprar",
+        tipo: "Casa",
+        cidade: "Conchas",
+        preco: "R$ 650.000",
+        imagens: [
+          { src: "assets/venda/imovel_1/fachada_imovel_1.jpg", alt: "Fachada da casa à venda na Rua Turmalina, 116, Joanin Parise, Conchas" },
+          { src: "assets/venda/imovel_1/fd8d8be6-d416-4d61-bf89-b3ea6fb51a7b.jpg", alt: "Foto da casa à venda na Rua Turmalina, 116, Conchas" }
+        ],
+        descricao: "Casa à venda na Rua Turmalina, 116, no Joanin Parise, em Conchas. Tem 2 quartos, sendo um suíte, sala, cozinha, banheiro e garagem. Há outra casa no fundo. Valor: R$ 650.000."
+      },
+      "minas-750": {
+        titulo: "Casa na Rua Minas Gerais",
+        operacao: "Comprar",
+        tipo: "Casa",
+        cidade: "Conchas",
+        preco: "R$ 700.000",
+        imagens: [
+          { src: "assets/venda/imovel_2/fachada_imovel_2.jpg", alt: "Fachada da casa à venda na Rua Minas Gerais, 750, Conchas" }
+        ],
+        descricao: "Casa à venda na Rua Minas Gerais, 750, em Conchas. Tem sala, 2 quartos, 2 banheiros, cozinha, lavanderia e garagem. Valor: R$ 700.000."
+      },
+      "cinema-minas": {
+        titulo: "Antigo cinema",
+        operacao: "Comprar",
+        tipo: "Comercial",
+        cidade: "Conchas",
+        preco: "R$ 900.000",
+        imagens: [
+          { src: "assets/venda/Imovel_3/fachada_imovel_3.jpg", alt: "Fachada do antigo cinema à venda na Rua Minas Gerais, 708, Conchas" }
+        ],
+        descricao: "Antigo cinema à venda na Rua Minas Gerais, 708, em Conchas. O terreno tem cerca de 554 m² e a área construída cerca de 407 m², sendo aproximadamente 98 m² de mezaninos e 294 m² no térreo. Valor: R$ 900.000."
+      },
+      "yamine": {
+        titulo: "Casa na Rua Yamine",
+        operacao: "Comprar",
+        tipo: "Casa",
+        cidade: "Conchas",
+        preco: "R$ 350.000",
+        imagens: [
+          { src: "assets/venda/imovel_4/fachada_imovel_4.jpg", alt: "Fachada da casa à venda na Rua Yamine, Conchas" },
+          { src: "assets/venda/imovel_4/606f5fdc-f202-4a88-9019-38bfe99892bd.jpg", alt: "Foto da casa à venda na Rua Yamine, Conchas" },
+          { src: "assets/venda/imovel_4/a3617f5d-ab5a-400b-b2c6-88e5001afb30.jpg", alt: "Foto da casa à venda na Rua Yamine, Conchas" },
+          { src: "assets/venda/imovel_4/b46a506c-95e9-42d1-99a5-a673181dfa03.jpg", alt: "Foto da casa à venda na Rua Yamine, Conchas" },
+          { src: "assets/venda/imovel_4/e0ee8cfe-2cd3-4d77-8c72-1c23bcfdc98d.jpg", alt: "Foto da casa à venda na Rua Yamine, Conchas" }
+        ],
+        descricao: "Casa à venda na Rua Yamine, em Conchas, próximo à YD. Tem sala, cozinha, 3 quartos sendo 1 suíte, lavanderia, escritório, churrasqueira e piscina. Valor: R$ 350.000."
+      },
+      "pernambuco": {
+        titulo: "Casa no Centro",
+        operacao: "Comprar",
+        tipo: "Casa",
+        cidade: "Conchas",
+        preco: "R$ 540.000",
+        imagens: [
+          { src: "assets/venda/imovel_5/fachada_imovel_5.jpg", alt: "Fachada da casa à venda na Rua Pernambuco, 389, Centro, Conchas" },
+          { src: "assets/venda/imovel_5/01c58fa3-6020-4928-b4ee-8c7832bc32ea.jpg", alt: "Foto da casa à venda na Rua Pernambuco, 389, Conchas" },
+          { src: "assets/venda/imovel_5/238c5c11-5eda-477e-9ddb-e79697def32d.jpg", alt: "Foto da casa à venda na Rua Pernambuco, 389, Conchas" },
+          { src: "assets/venda/imovel_5/265fab93-7787-48ce-b11d-c94cb8b634be.jpg", alt: "Foto da casa à venda na Rua Pernambuco, 389, Conchas" },
+          { src: "assets/venda/imovel_5/3618adeb-2dea-4236-9927-f0ddacd88f01.jpg", alt: "Foto da casa à venda na Rua Pernambuco, 389, Conchas" },
+          { src: "assets/venda/imovel_5/3f34a70a-3c96-40df-b91d-51ad8e414ebd.jpg", alt: "Foto da casa à venda na Rua Pernambuco, 389, Conchas" },
+          { src: "assets/venda/imovel_5/5fe2eab8-3ebd-4e85-b1b9-8a3638ad6e58.jpg", alt: "Foto da casa à venda na Rua Pernambuco, 389, Conchas" },
+          { src: "assets/venda/imovel_5/62e469aa-9160-4fa3-b2d3-aa3d772fe866.jpg", alt: "Foto da casa à venda na Rua Pernambuco, 389, Conchas" },
+          { src: "assets/venda/imovel_5/806ceec2-4067-4299-a52e-9f92159bdee7.jpg", alt: "Foto da casa à venda na Rua Pernambuco, 389, Conchas" },
+          { src: "assets/venda/imovel_5/88a775ce-421d-4b31-b668-125ac4c0efef.jpg", alt: "Foto da casa à venda na Rua Pernambuco, 389, Conchas" },
+          { src: "assets/venda/imovel_5/907e50d3-4959-49a4-aa21-0df69965c760.jpg", alt: "Foto da casa à venda na Rua Pernambuco, 389, Conchas" },
+          { src: "assets/venda/imovel_5/a8f98977-a638-44f6-a53b-ba60bc9f9548.jpg", alt: "Foto da casa à venda na Rua Pernambuco, 389, Conchas" },
+          { src: "assets/venda/imovel_5/c5852e00-f2b0-49b5-a98d-f42b36d91746.jpg", alt: "Foto da casa à venda na Rua Pernambuco, 389, Conchas" },
+          { src: "assets/venda/imovel_5/d7ef7fc9-c2a9-4193-9650-06344b1f637d.jpg", alt: "Foto da casa à venda na Rua Pernambuco, 389, Conchas" }
+        ],
+        descricao: "Casa à venda na Rua Pernambuco, 389, no Centro de Conchas. Tem 3 quartos, sendo 1 suíte, banheiro, sala, cozinha, lavanderia e quintal grande. Valor: R$ 540.000."
+      },
+      "ferrucio": {
+        titulo: "Casa na Rua Ferrúcio Tonolli",
+        operacao: "Comprar",
+        tipo: "Casa",
+        cidade: "Conchas",
+        preco: "R$ 500.000",
+        imagens: [
+          { src: "assets/venda/imovel_6/fachada_imovel_6.jpg", alt: "Fachada da casa à venda na Rua Ferrúcio Tonolli, 61, Conchas" },
+          { src: "assets/venda/imovel_6/1cfbc78d-a2d8-40e8-9489-73e794643b31.jpg", alt: "Foto da casa à venda na Rua Ferrúcio Tonolli, 61, Conchas" },
+          { src: "assets/venda/imovel_6/22b1ca21-7968-4e53-b1f2-e887ced4a726.jpg", alt: "Foto da casa à venda na Rua Ferrúcio Tonolli, 61, Conchas" },
+          { src: "assets/venda/imovel_6/38847cf5-29c3-42c5-b2fd-371ece0599e5.jpg", alt: "Foto da casa à venda na Rua Ferrúcio Tonolli, 61, Conchas" },
+          { src: "assets/venda/imovel_6/3b34124a-41ae-434c-82f2-a5ffb6ecd46f.jpg", alt: "Foto da casa à venda na Rua Ferrúcio Tonolli, 61, Conchas" },
+          { src: "assets/venda/imovel_6/45af2695-4a34-4fe9-a747-46acd9e78958.jpg", alt: "Foto da casa à venda na Rua Ferrúcio Tonolli, 61, Conchas" },
+          { src: "assets/venda/imovel_6/48995bee-fab3-4add-82c3-6b9d92ec7c21.jpg", alt: "Foto da casa à venda na Rua Ferrúcio Tonolli, 61, Conchas" },
+          { src: "assets/venda/imovel_6/538d9319-7fa0-436a-87f2-82c22500cad2.jpg", alt: "Foto da casa à venda na Rua Ferrúcio Tonolli, 61, Conchas" },
+          { src: "assets/venda/imovel_6/7a697a05-7782-4c96-96dd-f39980fef174.jpg", alt: "Foto da casa à venda na Rua Ferrúcio Tonolli, 61, Conchas" },
+          { src: "assets/venda/imovel_6/80d24ba2-f466-4098-9d88-be48d9975278.jpg", alt: "Foto da casa à venda na Rua Ferrúcio Tonolli, 61, Conchas" },
+          { src: "assets/venda/imovel_6/9760fd26-bba8-4ac2-a0d2-5056d633d19c.jpg", alt: "Foto da casa à venda na Rua Ferrúcio Tonolli, 61, Conchas" },
+          { src: "assets/venda/imovel_6/98598a90-faa2-4af7-9201-992033e67c24.jpg", alt: "Foto da casa à venda na Rua Ferrúcio Tonolli, 61, Conchas" },
+          { src: "assets/venda/imovel_6/9e19caa8-d72c-4f5e-988f-8803c13f3a3e.jpg", alt: "Foto da casa à venda na Rua Ferrúcio Tonolli, 61, Conchas" },
+          { src: "assets/venda/imovel_6/a1f55982-b1af-4478-bdb0-867fcb43dd8c.jpg", alt: "Foto da casa à venda na Rua Ferrúcio Tonolli, 61, Conchas" },
+          { src: "assets/venda/imovel_6/bc4085d5-cd5d-47df-9f15-db5fe861b45c.jpg", alt: "Foto da casa à venda na Rua Ferrúcio Tonolli, 61, Conchas" },
+          { src: "assets/venda/imovel_6/c8634f2c-9400-45ab-949d-9d87e7cdec37.jpg", alt: "Foto da casa à venda na Rua Ferrúcio Tonolli, 61, Conchas" },
+          { src: "assets/venda/imovel_6/e6d204e9-d744-442d-903b-3936d9b5055b.jpg", alt: "Foto da casa à venda na Rua Ferrúcio Tonolli, 61, Conchas" },
+          { src: "assets/venda/imovel_6/fc397c5c-91db-4cb3-91ca-ec03961101ad.jpg", alt: "Foto da casa à venda na Rua Ferrúcio Tonolli, 61, Conchas" }
+        ],
+        descricao: "Casa à venda na Rua Ferrúcio Tonolli, 61, em Conchas. Tem 3 quartos, sala, cozinha, 2 banheiros, lavanderia, quintal e garagem. Valor: R$ 500.000."
+      }
+    };
+
+    (function () {
+      const url = new URL(location.href);
+      url.hash = "";
+      const canonica = document.createElement("link");
+      canonica.rel = "canonical";
+      canonica.href = url.href;
+      document.head.appendChild(canonica);
+      document.querySelector('meta[property="og:url"]').content = url.href;
+      const imagem = document.querySelector('meta[property="og:image"]');
+      imagem.content = new URL(imagem.content, location.href).href;
+    })();
+
+    const params = new URLSearchParams(location.search);
+    const imovel = imoveis[params.get("id")];
+    const ficha = document.querySelector("#ficha");
+
+    if (!imovel) {
+      document.title = "Imóvel não encontrado · Imobiliária José Amim Alexandre";
+      document.querySelector('meta[name="description"]').content = "Esse anúncio não está na vitrine da Imobiliária José Amim Alexandre, em Conchas.";
+      ficha.innerHTML = '<a class="voltar" href="index.html#imoveis">Voltar aos imóveis</a><h1>Imóvel não encontrado</h1><p class="ficha__texto">Esse anúncio não está na vitrine. Volte e escolha outro card.</p>';
+    } else {
+      document.title = imovel.titulo + " em " + imovel.cidade + " · Imobiliária José Amim Alexandre";
+      const resumoBruto = imovel.titulo + " em " + imovel.cidade + ". " + imovel.operacao + ", " + imovel.tipo + ". " + imovel.descricao;
+      const resumo = resumoBruto.length > 155 ? resumoBruto.slice(0, 155).replace(/\s+\S*$/, "") + "…" : resumoBruto;
+      document.querySelector('meta[name="description"]').content = resumo;
+      document.querySelector('meta[property="og:title"]').content = document.title;
+      document.querySelector('meta[property="og:description"]').content = resumo;
+      document.querySelector('meta[property="og:image"]').content = new URL(imovel.imagens[0].src, location.href).href;
+      const textoWhats = encodeURIComponent("Olá, quero saber sobre " + imovel.titulo + " em " + imovel.cidade + ".");
+      ficha.innerHTML = [
+        '<a class="voltar" href="index.html#imoveis">Voltar aos imóveis</a>',
+        '<div class="galeria">',
+        '<div class="foto foto--grande">',
+        '<img class="galeria__destaque" alt="">',
+        '<span class="foto__marca" aria-hidden="true"><img src="assets/marca_d\'agua.png" alt=""></span>',
+        '</div>',
+        '<div class="galeria__miniaturas"></div>',
+        "</div>",
+        "<h1></h1>",
+        '<p class="ficha__meta"></p>',
+        '<p class="ficha__texto"></p>',
+        '<a class="zap" href="https://wa.me/5514981066430?text=' + textoWhats + '">Falar no WhatsApp</a>'
+      ].join("");
+      ficha.querySelector("h1").textContent = imovel.titulo;
+      ficha.querySelector(".ficha__meta").textContent = imovel.operacao + " · " + imovel.tipo + " · " + imovel.cidade + " · " + imovel.preco;
+      ficha.querySelector(".ficha__texto").textContent = imovel.descricao;
+
+      const destaque = ficha.querySelector(".galeria__destaque");
+      const faixa = ficha.querySelector(".galeria__miniaturas");
+
+      function mostrar(indice) {
+        const foto = imovel.imagens[indice];
+        destaque.src = foto.src;
+        destaque.alt = foto.alt;
+        faixa.querySelectorAll("button").forEach((botaoFoto, posicao) => {
+          botaoFoto.classList.toggle("ativa", posicao === indice);
+        });
+      }
+
+      imovel.imagens.forEach((foto, indice) => {
+        const botaoFoto = document.createElement("button");
+        botaoFoto.type = "button";
+        botaoFoto.innerHTML = '<span class="foto foto--mini"><img alt=""><span class="foto__marca" aria-hidden="true"><img src="assets/marca_d\'agua.png" alt=""></span></span>';
+        botaoFoto.querySelector(".foto > img").src = foto.src;
+        botaoFoto.querySelector(".foto > img").alt = foto.alt;
+        botaoFoto.addEventListener("click", () => mostrar(indice));
+        faixa.appendChild(botaoFoto);
+      });
+      mostrar(0);
+    }
+
+    const botao = document.querySelector(".menu-botao");
+    const gaveta = document.querySelector(".gaveta");
+    function fecharMenu() {
+      botao.setAttribute("aria-expanded", "false");
+      gaveta.hidden = true;
+    }
+
+    botao.addEventListener("click", () => {
+      const aberto = botao.getAttribute("aria-expanded") === "true";
+      botao.setAttribute("aria-expanded", String(!aberto));
+      gaveta.hidden = aberto;
+    });
+    gaveta.addEventListener("click", (evento) => {
+      if (evento.target.closest("a")) fecharMenu();
+    });
+    document.addEventListener("click", (evento) => {
+      if (gaveta.hidden) return;
+      if (evento.target.closest(".gaveta") || evento.target.closest(".menu-botao")) return;
+      fecharMenu();
+    });
+  </script>
+  <a class="whatsapp" href="https://wa.me/5514981066430?text=Ol%C3%A1%2C%20quero%20falar%20com%20a%20imobili%C3%A1ria." target="_blank" rel="noopener noreferrer" aria-label="Abrir 1 mensagem no WhatsApp">
+    <svg viewBox="0 0 24 24" aria-hidden="true">
+      <path fill="#fff" d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.435 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413z"/>
+    </svg>
+  </a>
+</body>
+</html>

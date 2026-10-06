@@ -1,0 +1,672 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Imobiliária José Amim Alexandre · Mais de 40 anos no mercado</title>
+  <link rel="icon" href="assets/logo.png" type="image/png">
+  <meta name="description" content="Imobiliária José Amim Alexandre em Conchas, SP. Mais de 40 anos no mercado. Aluguel, compra, permuta, avaliação e financiamento. CRECI 31.552-F.">
+  <meta name="robots" content="index,follow">
+  <meta property="og:locale" content="pt_BR">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Imobiliária José Amim Alexandre">
+  <meta property="og:title" content="Imobiliária José Amim Alexandre · Mais de 40 anos no mercado">
+  <meta property="og:description" content="Imobiliária José Amim Alexandre em Conchas, SP. Mais de 40 anos no mercado. Aluguel, compra, permuta, avaliação e financiamento. CRECI 31.552-F.">
+  <meta property="og:image" content="assets/logo.png">
+  <meta property="og:url" content="">
+  <meta name="twitter:card" content="summary">
+  <script type="application/ld+json" id="dados-imobiliaria">
+  {
+    "@context": "https://schema.org",
+    "@type": "RealEstateAgent",
+    "name": "Imobiliária José Amim Alexandre",
+    "description": "Corretor de imóveis em Conchas, SP, com mais de 40 anos no mercado. Aluguel, compra, permuta, avaliação e financiamento. CRECI 31.552-F.",
+    "telephone": "+5514981066430",
+    "image": "assets/logo.png",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Rua São Paulo, 309",
+      "addressLocality": "Conchas",
+      "addressRegion": "SP",
+      "addressCountry": "BR"
+    },
+    "areaServed": ["Conchas", "Pereiras", "Laranjal Paulista"],
+    "sameAs": "https://www.instagram.com/joseamimalexandre/"
+  }
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="topo">
+    <a class="marca" href="#inicio">
+      <img src="assets/logo-marca.png" alt="Imobiliária José Amim Alexandre" width="131" height="56">
+    </a>
+    <nav class="menu" aria-label="Principal">
+      <a href="#imoveis" data-atalho="comprar">Comprar</a>
+      <a href="#imoveis" data-atalho="alugar">Alugar</a>
+      <a href="#anunciar">Anunciar imóvel</a>
+      <a href="#financiamento">Financiamento</a>
+      <a href="#imobiliaria">Sobre nós</a>
+      <a href="#contato">Contato</a>
+    </nav>
+    <div class="topo__acoes">
+      <a class="telefone zap" href="https://wa.me/5514981066430?text=Ol%C3%A1%2C%20quero%20falar%20com%20a%20imobili%C3%A1ria." target="_blank" rel="noopener noreferrer">(14) 98106-6430</a>
+      <button class="menu-botao" type="button" aria-expanded="false" aria-controls="menu-site">
+        <span class="sr">Menu</span>
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </header>
+
+  <nav class="gaveta" id="menu-site" hidden>
+    <a href="#imoveis" data-atalho="comprar">Comprar</a>
+    <a href="#imoveis" data-atalho="alugar">Alugar</a>
+    <a href="#anunciar">Anunciar imóvel</a>
+    <a href="#financiamento">Financiamento</a>
+    <a href="#imobiliaria">Sobre nós</a>
+    <a href="#contato">Contato</a>
+  </nav>
+
+  <main>
+  <section class="hero" id="inicio">
+    <img class="hero__fundo" src="assets/fundo_hero.png" alt="" aria-hidden="true">
+    <video class="hero__video" autoplay muted loop playsinline poster="assets/fundo_hero.png" aria-hidden="true">
+      <source src="assets/video-fachada.mp4" type="video/mp4">
+    </video>
+    <img class="hero__a" src="assets/A-fundo.png" alt="" aria-hidden="true">
+    <div class="hero__conteudo">
+      <p class="selo-anos"><span>Mais de 40 anos no mercado</span></p>
+      <h1>Encontre o imóvel ideal em Conchas</h1>
+      <p class="apoio">Imobiliária José Amim Alexandr<span class="marca-e" title="Marca registrada">e</span></p>
+
+      <form class="busca" id="busca-hero" action="#imoveis">
+        <div class="busca__abas" role="tablist" aria-label="Operação">
+          <button type="button" class="ativo" data-op="comprar" role="tab" aria-selected="true">Comprar</button>
+          <button type="button" data-op="alugar" role="tab" aria-selected="false">Alugar</button>
+        </div>
+        <div class="acoes">
+          <label class="sr" for="tipo">Tipo de imóvel</label>
+          <select id="tipo" name="tipo">
+            <option value="">Tipo de imóvel</option>
+            <option value="casa">Casa</option>
+            <option value="comercial">Comercial</option>
+            <option value="terreno">Terreno</option>
+            <option value="chacara">Chácara</option>
+            <option value="apartamento">Apartamento</option>
+          </select>
+          <label class="sr" for="bairro">Bairro ou cidade</label>
+          <select id="bairro" name="bairro">
+            <option value="">Bairro ou cidade</option>
+            <option value="conchas">Conchas</option>
+            <option value="joanin parise">Joanin Parise</option>
+            <option value="centro">Centro</option>
+          </select>
+          <button class="busca__cta" type="submit">Pesquisar imóveis</button>
+        </div>
+      </form>
+
+      <div class="pills" role="group" aria-label="Atalhos de busca">
+        <button type="button" data-atalho="casa">Casas</button>
+        <button type="button" data-atalho="terreno">Terrenos</button>
+        <button type="button" data-atalho="chacara">Chácaras</button>
+        <button type="button" data-atalho="ate500">Até R$ 500 mil</button>
+      </div>
+      <a class="zap" href="https://wa.me/5514981066430?text=Ol%C3%A1%2C%20quero%20falar%20com%20a%20imobili%C3%A1ria." target="_blank" rel="noopener noreferrer">Falar no WhatsApp</a>
+    </div>
+  </section>
+
+  <section class="bloco bloco--claro explore" id="categorias">
+    <div class="esteira">
+      <div class="esteira__vista">
+        <div class="miolo explore__topo">
+          <p class="olho">Explore</p>
+          <h2>Explore por categoria</h2>
+        </div>
+        <div class="categorias">
+          <article class="categoria">
+            <img src="assets/categorias/casa.jpg?v=moderno" alt="">
+            <span class="foto__marca" aria-hidden="true"><img src="assets/marca_d'agua.png" alt=""></span>
+            <div class="categoria__corpo">
+              <span>Casas</span>
+              <div class="categoria__acoes">
+                <a href="#imoveis" data-atalho="casa" data-op="alugar">Alugar</a>
+                <a href="#imoveis" data-atalho="casa" data-op="comprar">Comprar</a>
+              </div>
+            </div>
+          </article>
+          <article class="categoria">
+            <img src="assets/categorias/terreno.jpg?v=20261006" alt="">
+            <span class="foto__marca" aria-hidden="true"><img src="assets/marca_d'agua.png" alt=""></span>
+            <div class="categoria__corpo">
+              <span>Terrenos e lotes</span>
+              <div class="categoria__acoes">
+                <a href="#imoveis" data-atalho="terreno" data-op="alugar">Alugar</a>
+                <a href="#imoveis" data-atalho="terreno" data-op="comprar">Comprar</a>
+              </div>
+            </div>
+          </article>
+          <article class="categoria">
+            <img src="assets/categorias/chacara.jpg?v=20261006" alt="">
+            <span class="foto__marca" aria-hidden="true"><img src="assets/marca_d'agua.png" alt=""></span>
+            <div class="categoria__corpo">
+              <span>Chácaras e sítios</span>
+              <div class="categoria__acoes">
+                <a href="#imoveis" data-atalho="chacara" data-op="alugar">Alugar</a>
+                <a href="#imoveis" data-atalho="chacara" data-op="comprar">Comprar</a>
+              </div>
+            </div>
+          </article>
+          <article class="categoria">
+            <img src="assets/categorias/comercial.jpg?v=moderno" alt="">
+            <span class="foto__marca" aria-hidden="true"><img src="assets/marca_d'agua.png" alt=""></span>
+            <div class="categoria__corpo">
+              <span>Imóveis comerciais</span>
+              <div class="categoria__acoes">
+                <a href="#imoveis" data-atalho="comercial" data-op="alugar">Alugar</a>
+                <a href="#imoveis" data-atalho="comercial" data-op="comprar">Comprar</a>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="bloco" id="imoveis">
+    <div class="miolo">
+      <p class="olho">Imóveis em Conchas</p>
+      <h2>Imóveis em destaque</h2>
+      <p class="vazio" id="vazio" hidden>Nenhum imóvel com esse filtro no momento.<br><a class="zap" href="https://wa.me/5514981066430?text=Ol%C3%A1%2C%20quero%20falar%20com%20a%20imobili%C3%A1ria." target="_blank" rel="noopener noreferrer">Chamar no WhatsApp</a></p>
+      <div class="grade">
+        <article class="card" data-op="comprar" data-tipo="casa" data-bairro="joanin parise" data-cidade="conchas" data-codigo="01" data-preco="650000" data-busca="01 rua turmalina joanin parise turmalina">
+          <a class="card__foto" href="imovel.html?id=turmalina">
+            <span class="foto">
+              <img src="assets/venda/imovel_1/fachada_imovel_1.jpg" alt="Fachada da casa à venda na Rua Turmalina, 116, Joanin Parise, Conchas">
+              <span class="foto__marca" aria-hidden="true"><img src="assets/marca_d'agua.png" alt=""></span>
+              <span class="selo">Venda</span>
+              <span class="selo selo--codigo">Cód. 01</span>
+            </span>
+          </a>
+          <div class="card__corpo">
+            <h3><a href="imovel.html?id=turmalina">Casa no Joanin Parise</a></h3>
+            <p class="card__local">Joanin Parise</p>
+            <ul class="card__detalhes">
+              <li><svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M3 18V11a2 2 0 0 1 2-2h5v4h11a2 2 0 0 1 2 2v3"/><path d="M3 14h18"/><path d="M7 9V7.5A1.5 1.5 0 0 1 8.5 6H11"/><path d="M5 18v2M19 18v2"/></svg><span>2 quartos</span></li>
+              <li><svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M8 6.5a4 4 0 0 1 8 0"/><path d="M6 8h12"/><path d="M12 8v3"/><path d="M9.5 14.5v.5M12 15.5v.5M14.5 14.5v.5M8 17.5v.5M12 18.5v.5M16 17.5v.5"/></svg><span>1 banheiro</span></li>
+              <li><svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M4 16V9l2.2-3h11.6L20 9v7"/><path d="M4 13h16"/><circle cx="7.5" cy="16" r="1.2"/><circle cx="16.5" cy="16" r="1.2"/></svg><span>Garagem</span></li>
+            </ul>
+            <p class="card__preco">R$ 650.000</p>
+            <div class="card__acoes">
+              <a class="card__whats" href="https://wa.me/5514981066430?text=Ol%C3%A1%2C%20quero%20saber%20sobre%20a%20casa%20na%20Rua%20Turmalina%2C%20116%2C%20Joanin%20Parise." target="_blank" rel="noopener noreferrer"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12.04 3C7.31 3 3.48 6.83 3.48 11.56c0 1.5.39 2.96 1.13 4.25L3.4 21l5.33-1.16a8.6 8.6 0 0 0 3.31.66h.01c4.73 0 8.56-3.83 8.56-8.56C20.6 6.83 16.77 3 12.04 3zm4.86 12.16c-.2.57-1.17 1.05-1.63 1.12-.42.06-.95.09-1.54-.1-.35-.11-.8-.26-1.38-.51-2.43-1.05-4.01-3.5-4.13-3.66-.12-.17-1-1.33-1-2.54s.63-1.8.86-2.05c.22-.25.49-.31.65-.31h.47c.15 0 .35-.06.55.42.2.5.7 1.72.76 1.84.06.13.1.27.02.44-.08.17-.12.27-.24.42-.12.14-.25.32-.36.43-.12.12-.24.24-.1.47.14.23.62 1.02 1.33 1.66.91.81 1.68 1.06 1.92 1.18.24.12.38.1.52-.06.14-.16.6-.7.76-.94.16-.24.32-.2.54-.12.22.08 1.4.66 1.64.78.24.12.4.18.46.28.06.1.06.58-.14 1.15z"/></svg>WhatsApp</a>
+              <a class="card__mais" href="imovel.html?id=turmalina">Ver detalhes</a>
+            </div>
+          </div>
+        </article>
+        <article class="card" data-op="comprar" data-tipo="casa" data-bairro="" data-cidade="conchas" data-codigo="02" data-preco="700000" data-busca="02 rua minas gerais 750 minas">
+          <a class="card__foto" href="imovel.html?id=minas-750">
+            <span class="foto">
+              <img src="assets/venda/imovel_2/fachada_imovel_2.jpg" alt="Fachada da casa à venda na Rua Minas Gerais, 750, Conchas">
+              <span class="foto__marca" aria-hidden="true"><img src="assets/marca_d'agua.png" alt=""></span>
+              <span class="selo">Venda</span>
+              <span class="selo selo--codigo">Cód. 02</span>
+            </span>
+          </a>
+          <div class="card__corpo">
+            <h3><a href="imovel.html?id=minas-750">Casa na Rua Minas Gerais</a></h3>
+            <p class="card__local">Rua Minas Gerais</p>
+            <ul class="card__detalhes">
+              <li><svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M3 18V11a2 2 0 0 1 2-2h5v4h11a2 2 0 0 1 2 2v3"/><path d="M3 14h18"/><path d="M7 9V7.5A1.5 1.5 0 0 1 8.5 6H11"/><path d="M5 18v2M19 18v2"/></svg><span>2 quartos</span></li>
+              <li><svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M8 6.5a4 4 0 0 1 8 0"/><path d="M6 8h12"/><path d="M12 8v3"/><path d="M9.5 14.5v.5M12 15.5v.5M14.5 14.5v.5M8 17.5v.5M12 18.5v.5M16 17.5v.5"/></svg><span>2 banheiros</span></li>
+              <li><svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M4 16V9l2.2-3h11.6L20 9v7"/><path d="M4 13h16"/><circle cx="7.5" cy="16" r="1.2"/><circle cx="16.5" cy="16" r="1.2"/></svg><span>Garagem</span></li>
+            </ul>
+            <p class="card__preco">R$ 700.000</p>
+            <div class="card__acoes">
+              <a class="card__whats" href="https://wa.me/5514981066430?text=Ol%C3%A1%2C%20quero%20saber%20sobre%20a%20casa%20na%20Rua%20Minas%20Gerais%2C%20750." target="_blank" rel="noopener noreferrer"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12.04 3C7.31 3 3.48 6.83 3.48 11.56c0 1.5.39 2.96 1.13 4.25L3.4 21l5.33-1.16a8.6 8.6 0 0 0 3.31.66h.01c4.73 0 8.56-3.83 8.56-8.56C20.6 6.83 16.77 3 12.04 3zm4.86 12.16c-.2.57-1.17 1.05-1.63 1.12-.42.06-.95.09-1.54-.1-.35-.11-.8-.26-1.38-.51-2.43-1.05-4.01-3.5-4.13-3.66-.12-.17-1-1.33-1-2.54s.63-1.8.86-2.05c.22-.25.49-.31.65-.31h.47c.15 0 .35-.06.55.42.2.5.7 1.72.76 1.84.06.13.1.27.02.44-.08.17-.12.27-.24.42-.12.14-.25.32-.36.43-.12.12-.24.24-.1.47.14.23.62 1.02 1.33 1.66.91.81 1.68 1.06 1.92 1.18.24.12.38.1.52-.06.14-.16.6-.7.76-.94.16-.24.32-.2.54-.12.22.08 1.4.66 1.64.78.24.12.4.18.46.28.06.1.06.58-.14 1.15z"/></svg>WhatsApp</a>
+              <a class="card__mais" href="imovel.html?id=minas-750">Ver detalhes</a>
+            </div>
+          </div>
+        </article>
+        <article class="card" data-op="comprar" data-tipo="comercial" data-bairro="" data-cidade="conchas" data-codigo="03" data-preco="900000" data-busca="03 rua minas gerais 708 cinema antigo">
+          <a class="card__foto" href="imovel.html?id=cinema-minas">
+            <span class="foto">
+              <img src="assets/venda/Imovel_3/fachada_imovel_3.jpg" alt="Fachada do antigo cinema à venda na Rua Minas Gerais, 708, Conchas">
+              <span class="foto__marca" aria-hidden="true"><img src="assets/marca_d'agua.png" alt=""></span>
+              <span class="selo">Venda</span>
+              <span class="selo selo--codigo">Cód. 03</span>
+            </span>
+          </a>
+          <div class="card__corpo">
+            <h3><a href="imovel.html?id=cinema-minas">Antigo cinema</a></h3>
+            <p class="card__local">Rua Minas Gerais</p>
+            <ul class="card__detalhes">
+              <li><svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M4 9V4h5"/><path d="M15 4h5v5"/><path d="M20 15v5h-5"/><path d="M9 20H4v-5"/></svg><span>407 m²</span></li>
+            </ul>
+            <p class="card__preco">R$ 900.000</p>
+            <div class="card__acoes">
+              <a class="card__whats" href="https://wa.me/5514981066430?text=Ol%C3%A1%2C%20quero%20saber%20sobre%20o%20antigo%20cinema%20na%20Rua%20Minas%20Gerais%2C%20708." target="_blank" rel="noopener noreferrer"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12.04 3C7.31 3 3.48 6.83 3.48 11.56c0 1.5.39 2.96 1.13 4.25L3.4 21l5.33-1.16a8.6 8.6 0 0 0 3.31.66h.01c4.73 0 8.56-3.83 8.56-8.56C20.6 6.83 16.77 3 12.04 3zm4.86 12.16c-.2.57-1.17 1.05-1.63 1.12-.42.06-.95.09-1.54-.1-.35-.11-.8-.26-1.38-.51-2.43-1.05-4.01-3.5-4.13-3.66-.12-.17-1-1.33-1-2.54s.63-1.8.86-2.05c.22-.25.49-.31.65-.31h.47c.15 0 .35-.06.55.42.2.5.7 1.72.76 1.84.06.13.1.27.02.44-.08.17-.12.27-.24.42-.12.14-.25.32-.36.43-.12.12-.24.24-.1.47.14.23.62 1.02 1.33 1.66.91.81 1.68 1.06 1.92 1.18.24.12.38.1.52-.06.14-.16.6-.7.76-.94.16-.24.32-.2.54-.12.22.08 1.4.66 1.64.78.24.12.4.18.46.28.06.1.06.58-.14 1.15z"/></svg>WhatsApp</a>
+              <a class="card__mais" href="imovel.html?id=cinema-minas">Ver detalhes</a>
+            </div>
+          </div>
+        </article>
+        <article class="card" data-op="comprar" data-tipo="casa" data-bairro="" data-cidade="conchas" data-codigo="04" data-preco="350000" data-busca="04 rua yamine yamine">
+          <a class="card__foto" href="imovel.html?id=yamine">
+            <span class="foto">
+              <img src="assets/venda/imovel_4/fachada_imovel_4.jpg" alt="Fachada da casa à venda na Rua Yamine, Conchas">
+              <span class="foto__marca" aria-hidden="true"><img src="assets/marca_d'agua.png" alt=""></span>
+              <span class="selo">Venda</span>
+              <span class="selo selo--codigo">Cód. 04</span>
+            </span>
+          </a>
+          <div class="card__corpo">
+            <h3><a href="imovel.html?id=yamine">Casa na Rua Yamine</a></h3>
+            <p class="card__local">Rua Yamine</p>
+            <ul class="card__detalhes">
+              <li><svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M3 18V11a2 2 0 0 1 2-2h5v4h11a2 2 0 0 1 2 2v3"/><path d="M3 14h18"/><path d="M7 9V7.5A1.5 1.5 0 0 1 8.5 6H11"/><path d="M5 18v2M19 18v2"/></svg><span>3 quartos</span></li>
+            </ul>
+            <p class="card__preco">R$ 350.000</p>
+            <div class="card__acoes">
+              <a class="card__whats" href="https://wa.me/5514981066430?text=Ol%C3%A1%2C%20quero%20saber%20sobre%20a%20casa%20na%20Rua%20Yamine." target="_blank" rel="noopener noreferrer"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12.04 3C7.31 3 3.48 6.83 3.48 11.56c0 1.5.39 2.96 1.13 4.25L3.4 21l5.33-1.16a8.6 8.6 0 0 0 3.31.66h.01c4.73 0 8.56-3.83 8.56-8.56C20.6 6.83 16.77 3 12.04 3zm4.86 12.16c-.2.57-1.17 1.05-1.63 1.12-.42.06-.95.09-1.54-.1-.35-.11-.8-.26-1.38-.51-2.43-1.05-4.01-3.5-4.13-3.66-.12-.17-1-1.33-1-2.54s.63-1.8.86-2.05c.22-.25.49-.31.65-.31h.47c.15 0 .35-.06.55.42.2.5.7 1.72.76 1.84.06.13.1.27.02.44-.08.17-.12.27-.24.42-.12.14-.25.32-.36.43-.12.12-.24.24-.1.47.14.23.62 1.02 1.33 1.66.91.81 1.68 1.06 1.92 1.18.24.12.38.1.52-.06.14-.16.6-.7.76-.94.16-.24.32-.2.54-.12.22.08 1.4.66 1.64.78.24.12.4.18.46.28.06.1.06.58-.14 1.15z"/></svg>WhatsApp</a>
+              <a class="card__mais" href="imovel.html?id=yamine">Ver detalhes</a>
+            </div>
+          </div>
+        </article>
+        <article class="card" data-op="comprar" data-tipo="casa" data-bairro="centro" data-cidade="conchas" data-codigo="05" data-preco="540000" data-busca="05 rua pernambuco 389 centro pernambuco">
+          <a class="card__foto" href="imovel.html?id=pernambuco">
+            <span class="foto">
+              <img src="assets/venda/imovel_5/fachada_imovel_5.jpg" alt="Fachada da casa à venda na Rua Pernambuco, 389, Centro, Conchas">
+              <span class="foto__marca" aria-hidden="true"><img src="assets/marca_d'agua.png" alt=""></span>
+              <span class="selo">Venda</span>
+              <span class="selo selo--codigo">Cód. 05</span>
+            </span>
+          </a>
+          <div class="card__corpo">
+            <h3><a href="imovel.html?id=pernambuco">Casa no Centro</a></h3>
+            <p class="card__local">Centro</p>
+            <ul class="card__detalhes">
+              <li><svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M3 18V11a2 2 0 0 1 2-2h5v4h11a2 2 0 0 1 2 2v3"/><path d="M3 14h18"/><path d="M7 9V7.5A1.5 1.5 0 0 1 8.5 6H11"/><path d="M5 18v2M19 18v2"/></svg><span>3 quartos</span></li>
+              <li><svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M8 6.5a4 4 0 0 1 8 0"/><path d="M6 8h12"/><path d="M12 8v3"/><path d="M9.5 14.5v.5M12 15.5v.5M14.5 14.5v.5M8 17.5v.5M12 18.5v.5M16 17.5v.5"/></svg><span>1 banheiro</span></li>
+            </ul>
+            <p class="card__preco">R$ 540.000</p>
+            <div class="card__acoes">
+              <a class="card__whats" href="https://wa.me/5514981066430?text=Ol%C3%A1%2C%20quero%20saber%20sobre%20a%20casa%20na%20Rua%20Pernambuco%2C%20389%2C%20Centro." target="_blank" rel="noopener noreferrer"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12.04 3C7.31 3 3.48 6.83 3.48 11.56c0 1.5.39 2.96 1.13 4.25L3.4 21l5.33-1.16a8.6 8.6 0 0 0 3.31.66h.01c4.73 0 8.56-3.83 8.56-8.56C20.6 6.83 16.77 3 12.04 3zm4.86 12.16c-.2.57-1.17 1.05-1.63 1.12-.42.06-.95.09-1.54-.1-.35-.11-.8-.26-1.38-.51-2.43-1.05-4.01-3.5-4.13-3.66-.12-.17-1-1.33-1-2.54s.63-1.8.86-2.05c.22-.25.49-.31.65-.31h.47c.15 0 .35-.06.55.42.2.5.7 1.72.76 1.84.06.13.1.27.02.44-.08.17-.12.27-.24.42-.12.14-.25.32-.36.43-.12.12-.24.24-.1.47.14.23.62 1.02 1.33 1.66.91.81 1.68 1.06 1.92 1.18.24.12.38.1.52-.06.14-.16.6-.7.76-.94.16-.24.32-.2.54-.12.22.08 1.4.66 1.64.78.24.12.4.18.46.28.06.1.06.58-.14 1.15z"/></svg>WhatsApp</a>
+              <a class="card__mais" href="imovel.html?id=pernambuco">Ver detalhes</a>
+            </div>
+          </div>
+        </article>
+        <article class="card" data-op="comprar" data-tipo="casa" data-bairro="" data-cidade="conchas" data-codigo="06" data-preco="500000" data-busca="06 rua ferrucio tonolli 61 ferrucio">
+          <a class="card__foto" href="imovel.html?id=ferrucio">
+            <span class="foto">
+              <img src="assets/venda/imovel_6/fachada_imovel_6.jpg" alt="Fachada da casa à venda na Rua Ferrúcio Tonolli, 61, Conchas">
+              <span class="foto__marca" aria-hidden="true"><img src="assets/marca_d'agua.png" alt=""></span>
+              <span class="selo">Venda</span>
+              <span class="selo selo--codigo">Cód. 06</span>
+            </span>
+          </a>
+          <div class="card__corpo">
+            <h3><a href="imovel.html?id=ferrucio">Casa na Rua Ferrúcio Tonolli</a></h3>
+            <p class="card__local">Rua Ferrúcio Tonolli</p>
+            <ul class="card__detalhes">
+              <li><svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M3 18V11a2 2 0 0 1 2-2h5v4h11a2 2 0 0 1 2 2v3"/><path d="M3 14h18"/><path d="M7 9V7.5A1.5 1.5 0 0 1 8.5 6H11"/><path d="M5 18v2M19 18v2"/></svg><span>3 quartos</span></li>
+              <li><svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M8 6.5a4 4 0 0 1 8 0"/><path d="M6 8h12"/><path d="M12 8v3"/><path d="M9.5 14.5v.5M12 15.5v.5M14.5 14.5v.5M8 17.5v.5M12 18.5v.5M16 17.5v.5"/></svg><span>2 banheiros</span></li>
+              <li><svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M4 16V9l2.2-3h11.6L20 9v7"/><path d="M4 13h16"/><circle cx="7.5" cy="16" r="1.2"/><circle cx="16.5" cy="16" r="1.2"/></svg><span>Garagem</span></li>
+            </ul>
+            <p class="card__preco">R$ 500.000</p>
+            <div class="card__acoes">
+              <a class="card__whats" href="https://wa.me/5514981066430?text=Ol%C3%A1%2C%20quero%20saber%20sobre%20a%20casa%20na%20Rua%20Ferr%C3%BAcio%20Tonolli%2C%2061." target="_blank" rel="noopener noreferrer"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12.04 3C7.31 3 3.48 6.83 3.48 11.56c0 1.5.39 2.96 1.13 4.25L3.4 21l5.33-1.16a8.6 8.6 0 0 0 3.31.66h.01c4.73 0 8.56-3.83 8.56-8.56C20.6 6.83 16.77 3 12.04 3zm4.86 12.16c-.2.57-1.17 1.05-1.63 1.12-.42.06-.95.09-1.54-.1-.35-.11-.8-.26-1.38-.51-2.43-1.05-4.01-3.5-4.13-3.66-.12-.17-1-1.33-1-2.54s.63-1.8.86-2.05c.22-.25.49-.31.65-.31h.47c.15 0 .35-.06.55.42.2.5.7 1.72.76 1.84.06.13.1.27.02.44-.08.17-.12.27-.24.42-.12.14-.25.32-.36.43-.12.12-.24.24-.1.47.14.23.62 1.02 1.33 1.66.91.81 1.68 1.06 1.92 1.18.24.12.38.1.52-.06.14-.16.6-.7.76-.94.16-.24.32-.2.54-.12.22.08 1.4.66 1.64.78.24.12.4.18.46.28.06.1.06.58-.14 1.15z"/></svg>WhatsApp</a>
+              <a class="card__mais" href="imovel.html?id=ferrucio">Ver detalhes</a>
+            </div>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="capta" id="anunciar">
+    <div class="miolo capta__miolo">
+      <div>
+        <p class="olho olho--claro">Para proprietários</p>
+        <h2>Anuncie com quem conhece Conchas há mais de 40 anos</h2>
+        <p>Avaliação e anúncio com atendimento direto, no Centro, para quem quer vender ou alugar.</p>
+      </div>
+      <div class="capta__acoes">
+        <a class="zap" href="https://wa.me/5514981066430?text=Ol%C3%A1%2C%20quero%20anunciar%20um%20im%C3%B3vel%20em%20Conchas.">Anunciar meu imóvel</a>
+        <a class="zap" href="https://wa.me/5514981066430?text=Ol%C3%A1%2C%20quero%20avaliar%20um%20im%C3%B3vel%20em%20Conchas.">Solicitar avaliação</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="bloco" id="servicos">
+    <div class="miolo">
+      <p class="olho">Serviços</p>
+      <h2>Serviços e financiamento</h2>
+      <div class="servicos">
+        <article id="financiamento">
+          <h3>Simulação de financiamento</h3>
+          <p>Orientação para quem vai comprar e precisa entender entrada, parcelas e documentos antes de fechar.</p>
+          <a class="zap" href="https://wa.me/5514981066430?text=Olá,%20quero%20orientação%20sobre%20financiamento.">Falar sobre financiamento</a>
+        </article>
+        <article id="documentacao">
+          <h3>Documentação do imóvel</h3>
+          <p>Orientação sobre os documentos da negociação, do anúncio até a escritura, sem substituir um advogado.</p>
+          <a class="zap" href="https://wa.me/5514981066430?text=Olá,%20quero%20orientação%20sobre%20a%20documentação%20de%20um%20imóvel.">Pedir orientação</a>
+        </article>
+        <article id="avaliar">
+          <h3>Avaliação profissional</h3>
+          <p>Uma leitura do valor com base no que se vende e se aluga em Conchas, antes de anunciar ou negociar.</p>
+          <a class="zap" href="https://wa.me/5514981066430?text=Olá,%20quero%20avaliar%20um%20imóvel%20em%20Conchas.">Solicitar avaliação</a>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="bloco bloco--claro sobre" id="imobiliaria">
+    <div class="miolo">
+      <div class="sobre__grade">
+        <div>
+          <p class="olho">A imobiliária</p>
+          <h2>Quem conhece Conchas há mais de 40 anos</h2>
+          <p>José Amim Alexandre acompanha famílias da cidade na compra, no aluguel e na troca de imóvel. O atendimento é direto, no Centro, com o tempo de quem já viu o mercado local mudar.</p>
+          <p>Corretor de imóveis CRECI 31.552-F.</p>
+          <a class="zap" href="https://wa.me/5514981066430?text=Ol%C3%A1%2C%20quero%20falar%20com%20a%20imobili%C3%A1ria." target="_blank" rel="noopener noreferrer">Falar no WhatsApp</a>
+        </div>
+        <ul class="marcos">
+          <li><strong>40+</strong><span>anos no mercado</span></li>
+          <li><strong>Conchas</strong><span>e a região</span></li>
+          <li><strong>3 caminhos</strong><span>alugar, comprar ou permutar</span></li>
+        </ul>
+      </div>
+      <p class="olho olho--espaco">Onde atuamos</p>
+      <ul class="bairros">
+        <li>Centro</li>
+        <li>Tomazela</li>
+        <li>Vila Santa Rita</li>
+        <li>Cidade Feliz</li>
+        <li>Zona rural</li>
+      </ul>
+    </div>
+  </section>
+  </main>
+
+  <footer class="contato" id="contato">
+    <div class="miolo contato__grade">
+      <div>
+        <a class="marca" href="#inicio">
+          <img src="assets/logo-marca.png" alt="Imobiliária José Amim Alexandre" width="131" height="56">
+        </a>
+        <p>Corretor de imóveis CRECI 31.552-F</p>
+        <p>Mais de 40 anos no mercado em Conchas.</p>
+      </div>
+      <div>
+        <h3>Endereço</h3>
+        <p><a href="https://maps.google.com/?q=Rua+S%C3%A3o+Paulo,+309+-+Centro,+Conchas+-+SP">Rua São Paulo, 309 - Centro, Conchas - SP</a></p>
+        <p><a href="tel:+5514981066430">(14) 98106-6430</a></p>
+        <p><a class="zap" href="https://wa.me/5514981066430?text=Ol%C3%A1%2C%20quero%20falar%20com%20a%20imobili%C3%A1ria." target="_blank" rel="noopener noreferrer">WhatsApp</a></p>
+      </div>
+      <div>
+        <h3>No site</h3>
+        <p><a href="#imoveis" data-atalho="comprar">Comprar</a></p>
+        <p><a href="#imoveis" data-atalho="alugar">Alugar</a></p>
+        <p><a href="#anunciar">Anunciar imóvel</a></p>
+        <p><a href="#financiamento">Financiamento</a></p>
+        <p><a href="#imobiliaria">Sobre nós</a></p>
+        <p><a href="#contato">Contato</a></p>
+      </div>
+      <div>
+        <h3>Instagram</h3>
+        <p><a href="https://www.instagram.com/joseamimalexandre/" target="_blank" rel="noopener">joseamimalexandre</a></p>
+      </div>
+    </div>
+    <div class="miolo direitos">
+      <p>© 2026 Imobiliária José Amim Alexandr<span class="marca-e" title="Marca registrada">e</span>. Todos os direitos reservados.</p>
+      <p><a href="politica-de-privacidade.html">Política de privacidade</a></p>
+      <p>Desenvolvido por <a href="https://www.msdigitais.com.br" target="_blank" rel="noopener noreferrer">www.msdigitais.com.br</a></p>
+    </div>
+  </footer>
+
+  <script>
+    (function () {
+      const url = new URL(location.href);
+      url.hash = "";
+      url.search = "";
+      url.pathname = url.pathname.replace(/index\.html$/, "");
+      const canonica = document.createElement("link");
+      canonica.rel = "canonical";
+      canonica.href = url.href;
+      document.head.appendChild(canonica);
+      document.querySelector('meta[property="og:url"]').content = url.href;
+      const imagem = document.querySelector('meta[property="og:image"]');
+      imagem.content = new URL(imagem.content, location.href).href;
+      const dados = document.querySelector("#dados-imobiliaria");
+      const json = JSON.parse(dados.textContent);
+      json.url = url.href;
+      json.image = new URL("assets/logo.png", location.href).href;
+      dados.textContent = JSON.stringify(json);
+    })();
+
+    const botao = document.querySelector(".menu-botao");
+    const gaveta = document.querySelector(".gaveta");
+
+    function fecharMenu() {
+      botao.setAttribute("aria-expanded", "false");
+      gaveta.hidden = true;
+    }
+
+    botao.addEventListener("click", () => {
+      const aberto = botao.getAttribute("aria-expanded") === "true";
+      botao.setAttribute("aria-expanded", String(!aberto));
+      gaveta.hidden = aberto;
+    });
+
+    gaveta.addEventListener("click", (evento) => {
+      if (evento.target.closest("a")) fecharMenu();
+    });
+
+    document.addEventListener("click", (evento) => {
+      if (gaveta.hidden) return;
+      if (evento.target.closest(".gaveta") || evento.target.closest(".menu-botao")) return;
+      fecharMenu();
+    });
+
+    const cards = document.querySelectorAll(".card");
+    const vazio = document.querySelector("#vazio");
+    const abas = document.querySelectorAll(".busca__abas button");
+    const pills = document.querySelectorAll(".pills button");
+    const tipo = document.querySelector("#tipo");
+    const bairro = document.querySelector("#bairro");
+    const estado = { op: "comprar", tipo: "", bairro: "", termo: "", maxPreco: 0 };
+
+    function normalizar(texto) {
+      return (texto || "").toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g, "").trim();
+    }
+
+    function termoCombina(card, busca) {
+      if (!busca) return true;
+      const consulta = normalizar(busca).replace(/\bcod\.?\b/g, "").replace(/\s+/g, " ").trim();
+      if (!consulta) return true;
+      const alvo = normalizar([card.dataset.busca, card.dataset.cidade, card.dataset.bairro, card.dataset.codigo].join(" "));
+      if (alvo.includes(consulta)) return true;
+      const digitos = consulta.replace(/\D/g, "");
+      if (!digitos) return false;
+      return card.dataset.codigo === String(Number(digitos)).padStart(2, "0");
+    }
+
+    function combina(card) {
+      if (estado.op && card.dataset.op !== estado.op) return false;
+      if (estado.tipo && card.dataset.tipo !== estado.tipo) return false;
+      if (estado.bairro === "conchas") {
+        if (normalizar(card.dataset.cidade) !== "conchas") return false;
+      } else if (estado.bairro && normalizar(card.dataset.bairro) !== estado.bairro) {
+        return false;
+      }
+      if (estado.maxPreco && Number(card.dataset.preco) > estado.maxPreco) return false;
+      return termoCombina(card, estado.termo);
+    }
+
+    function marcarAbas() {
+      abas.forEach((aba) => {
+        const ativa = aba.dataset.op === estado.op;
+        aba.classList.toggle("ativo", ativa);
+        aba.setAttribute("aria-selected", String(ativa));
+      });
+    }
+
+    function filtrar() {
+      let visiveis = 0;
+      cards.forEach((card) => {
+        const mostra = combina(card);
+        card.hidden = !mostra;
+        if (mostra) visiveis += 1;
+      });
+      vazio.hidden = visiveis > 0;
+    }
+
+    function sincronizar() {
+      tipo.value = estado.tipo;
+      bairro.value = estado.bairro;
+      marcarAbas();
+    }
+
+    function aplicarAtalho(nome, op) {
+      estado.tipo = "";
+      estado.bairro = "";
+      estado.termo = "";
+      estado.maxPreco = 0;
+      if (nome === "comprar" || nome === "alugar") estado.op = nome;
+      if (nome === "casa") {
+        estado.op = "comprar";
+        estado.tipo = "casa";
+        estado.bairro = "conchas";
+      }
+      if (nome === "terreno") {
+        estado.op = "comprar";
+        estado.tipo = "terreno";
+      }
+      if (nome === "chacara") {
+        estado.op = "comprar";
+        estado.tipo = "chacara";
+      }
+      if (nome === "comercial") {
+        estado.op = "comprar";
+        estado.tipo = "comercial";
+      }
+      if (nome === "ate500") {
+        estado.op = "comprar";
+        estado.maxPreco = 500000;
+      }
+      if (op === "comprar" || op === "alugar") estado.op = op;
+      pills.forEach((pill) => pill.classList.toggle("ativo", op !== "alugar" && pill.dataset.atalho === nome));
+      sincronizar();
+      filtrar();
+      document.querySelector("#imoveis").scrollIntoView({ behavior: "smooth" });
+    }
+
+    abas.forEach((aba) => {
+      aba.addEventListener("click", () => {
+        estado.op = aba.dataset.op;
+        marcarAbas();
+      });
+    });
+
+    document.addEventListener("click", (evento) => {
+      const atalho = evento.target.closest("[data-atalho]");
+      if (!atalho) return;
+      aplicarAtalho(atalho.dataset.atalho, atalho.dataset.op);
+    });
+
+    document.querySelector("#busca-hero").addEventListener("submit", (evento) => {
+      evento.preventDefault();
+      estado.op = document.querySelector(".busca__abas .ativo").dataset.op;
+      estado.tipo = tipo.value;
+      estado.bairro = bairro.value;
+      estado.termo = "";
+      estado.maxPreco = 0;
+      pills.forEach((pill) => pill.classList.remove("ativo"));
+      filtrar();
+      document.querySelector("#imoveis").scrollIntoView({ behavior: "smooth" });
+    });
+
+    function peloHash() {
+      const nome = location.hash.replace("#", "");
+      if (nome === "alugar" || nome === "comprar") aplicarAtalho(nome);
+    }
+
+    window.addEventListener("hashchange", peloHash);
+    peloHash();
+    filtrar();
+  </script>
+  <script>
+    (function () {
+      const esteira = document.querySelector(".esteira");
+      const vista = document.querySelector(".esteira__vista");
+      const trilho = document.querySelector(".categorias");
+      if (!esteira || !vista || !trilho) return;
+      const reduzir = window.matchMedia("(prefers-reduced-motion: reduce)");
+      const estreito = window.matchMedia("(max-width: 900px)");
+
+      function curso() {
+        return Math.max(0, trilho.scrollWidth - vista.clientWidth);
+      }
+
+      function esteiraAtiva() {
+        return estreito.matches && !reduzir.matches;
+      }
+
+      function medir() {
+        if (!esteiraAtiva()) {
+          esteira.style.height = "";
+          trilho.style.transform = "";
+          return;
+        }
+        esteira.style.height = (vista.offsetHeight + curso()) + "px";
+        mover();
+      }
+
+      function mover() {
+        if (!esteiraAtiva()) return;
+        const maximo = curso();
+        const limite = parseFloat(getComputedStyle(vista).top) || 0;
+        const andado = Math.min(Math.max(limite - esteira.getBoundingClientRect().top, 0), maximo);
+        trilho.style.transform = "translate3d(" + (-andado) + "px, 0, 0)";
+      }
+
+      medir();
+      window.addEventListener("scroll", mover, { passive: true });
+      window.addEventListener("resize", medir);
+      reduzir.addEventListener("change", medir);
+      estreito.addEventListener("change", medir);
+    })();
+  </script>
+  <a class="whatsapp whatsapp--oculto" href="https://wa.me/5514981066430?text=Ol%C3%A1%2C%20quero%20falar%20com%20a%20imobili%C3%A1ria." target="_blank" rel="noopener noreferrer" aria-label="Abrir 1 mensagem no WhatsApp">
+    <svg viewBox="0 0 24 24" aria-hidden="true">
+      <path fill="#fff" d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.435 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413z"/>
+    </svg>
+  </a>
+  <script>
+    (function () {
+      const botao = document.querySelector("a.whatsapp");
+      const hero = document.querySelector(".hero");
+      if (!botao || !hero) return;
+      const estreito = window.matchMedia("(max-width: 900px)");
+
+      function heroNaTela() {
+        const caixa = hero.getBoundingClientRect();
+        return caixa.bottom > 0 && caixa.top < window.innerHeight;
+      }
+
+      function aplicar() {
+        botao.classList.toggle("whatsapp--oculto", estreito.matches && heroNaTela());
+      }
+
+      aplicar();
+      window.addEventListener("scroll", aplicar, { passive: true });
+      window.addEventListener("resize", aplicar);
+      estreito.addEventListener("change", aplicar);
+    })();
+  </script>
+</body>
+</html>
