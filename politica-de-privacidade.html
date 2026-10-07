@@ -17,7 +17,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="styles.css?v=20261007">
 </head>
 <body class="pagina-imovel">
   <header class="topo">
@@ -25,12 +25,9 @@
       <img src="assets/logo-marca.png" alt="Imobiliária José Amim Alexandre" width="131" height="56">
     </a>
     <nav class="menu" aria-label="Principal">
-      <a href="index.html#comprar">Comprar</a>
-      <a href="index.html#alugar">Alugar</a>
-      <a href="index.html#anunciar">Anunciar imóvel</a>
-      <a href="index.html#financiamento">Financiamento</a>
-      <a href="index.html#imobiliaria">Sobre nós</a>
-      <a href="index.html#contato">Contato</a>
+      <a href="comprar.html">Comprar</a>
+      <a href="alugar.html">Alugar</a>
+      <a href="anunciar.html">Anunciar imóvel</a>
     </nav>
     <div class="topo__acoes">
       <a class="telefone zap" href="https://wa.me/5514981066430?text=Ol%C3%A1%2C%20quero%20falar%20com%20a%20imobili%C3%A1ria." target="_blank" rel="noopener noreferrer">(14) 98106-6430</a>
@@ -44,35 +41,67 @@
   </header>
 
   <nav class="gaveta" id="menu-site" hidden>
-    <a href="index.html#comprar">Comprar</a>
-    <a href="index.html#alugar">Alugar</a>
-    <a href="index.html#anunciar">Anunciar imóvel</a>
-    <a href="index.html#financiamento">Financiamento</a>
-    <a href="index.html#imobiliaria">Sobre nós</a>
-    <a href="index.html#contato">Contato</a>
+    <div class="gaveta__painel">
+      <button class="gaveta__fechar" type="button">
+        <span class="sr">Fechar menu</span>
+      </button>
+      <div class="gaveta__grupo">
+        <p>Imóveis</p>
+        <a href="comprar.html">Imóveis à venda</a>
+        <a href="alugar.html">Imóveis para alugar</a>
+        <a href="permuta.html">Permuta</a>
+        <a href="index.html#imoveis">Destaques</a>
+        <a href="anunciar.html">Anunciar seu imóvel</a>
+      </div>
+      <div class="gaveta__grupo">
+        <p>Serviços</p>
+        <a href="anunciar.html#avaliacao">Avaliação</a>
+        <a href="index.html#documentacao">Documentação</a>
+      </div>
+      <div class="gaveta__grupo">
+        <p>A imobiliária</p>
+        <a href="index.html#imobiliaria">Sobre nós</a>
+        <a href="index.html#contato">Contato</a>
+        <a href="politica-de-privacidade.html" aria-current="page">Política de privacidade</a>
+        <a href="https://www.instagram.com/joseamimalexandre/" target="_blank" rel="noopener noreferrer">Instagram</a>
+      </div>
+      <div class="gaveta__grupo">
+        <p>Contato</p>
+        <a href="tel:+5514981066430">(14) 98106-6430</a>
+        <a class="zap" href="https://wa.me/5514981066430?text=Ol%C3%A1%2C%20quero%20falar%20com%20a%20imobili%C3%A1ria." target="_blank" rel="noopener noreferrer">WhatsApp</a>
+        <a href="https://www.google.com/maps/search/?api=1&query=Rua+S%C3%A3o+Paulo%2C+309+-+Centro%2C+Conchas+-+SP" target="_blank" rel="noopener noreferrer">Rua São Paulo, 309 - Centro, Conchas - SP</a>
+      </div>
+    </div>
   </nav>
 
   <main class="ficha texto">
+    <a class="voltar" href="index.html">Voltar à página inicial</a>
     <h1>Política de privacidade</h1>
-    <p>Esta página explica o que a Imobiliária José Amim Alexandre faz com dados pessoais de quem usa este site. A versão é de 28 de setembro de 2026.</p>
+    <p>Esta página explica o que a Imobiliária José Amim Alexandre faz com dados pessoais de quem usa este site. A versão é de 7 de outubro de 2026.</p>
 
     <h2>Quem é o responsável</h2>
     <p>O responsável pelos dados é José Amim Alexandre, corretor de imóveis, CRECI 31.552-F, com endereço na Rua São Paulo, 309 - Centro, Conchas - SP. O contato é o telefone (14) 98106-6430, também pelo WhatsApp nesse número.</p>
 
-    <h2>O que este site não faz</h2>
-    <p>O site não tem cadastro, formulário nem anúncio pago. Ele não grava cookie próprio e não usa ferramenta de estatística de visita. Os imóveis da vitrine são exemplos até a carteira real ser publicada.</p>
+    <h2>Finalidade da coleta</h2>
+    <p>Os dados servem para responder o contato, mostrar imóveis, combinar visita, avaliar um imóvel ou seguir um anúncio, uma compra, um aluguel ou uma permuta. A imobiliária não vende esses dados e não usa o site para anúncio pago nem para medir audiência.</p>
+    <p>Só abrir as páginas não pede nome, telefone nem e-mail. O servidor que publica o site pode registrar dados técnicos de acesso, como endereço IP, data e página aberta, para o site funcionar e para segurança. Esses registros não são usados para propaganda.</p>
+    <p>O formulário de anúncio pede nome e telefone. E-mail, endereço e as características do imóvel são opcionais. Ao enviar, o navegador abre o WhatsApp com essa mensagem. O site não guarda um cadastro: o atendimento continua na conversa.</p>
 
-    <h2>Quando você só navega</h2>
-    <p>Abrir as páginas não pede nome, telefone nem e-mail. O servidor que publica o site pode registrar dados técnicos de acesso, como endereço IP, data e página aberta, para o site funcionar e para segurança. A imobiliária não usa esses registros para propaganda.</p>
-    <p>A letra do site é a fonte Roboto, carregada do Google. Nesse momento o navegador fala com o Google e pode enviar o endereço IP e dados do navegador. A política do Google está em <a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer">policies.google.com/privacy</a>.</p>
+    <h2>Cookies funcionais e de navegação</h2>
+    <p>Os cookies funcionais guardam no navegador a confirmação de que você aceitou o aviso de cookies, para o banner não aparecer de novo. Essa escolha fica só no seu aparelho. Apagar os dados do site nas configurações do navegador faz o aviso voltar.</p>
+    <p>Os cookies de navegação acompanham o funcionamento das páginas. A letra do site é a fonte Roboto, carregada do Google. Nesse momento o navegador fala com o Google e pode enviar o endereço IP e dados do navegador. O Google pode gravar cookies técnicos para entregar a fonte. A política do Google está em <a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer">policies.google.com/privacy</a>.</p>
+    <p>O site não usa cookie de publicidade nem ferramenta de estatística de visita.</p>
 
     <h2>Quando você chama no WhatsApp ou no telefone</h2>
-    <p>Os botões de WhatsApp abrem uma conversa com a mensagem já escrita sobre o assunto (imóvel, avaliação, financiamento, permuta ou atendimento). A partir daí a conversa acontece no WhatsApp, da Meta, e segue a política deles: <a href="https://www.whatsapp.com/legal/privacy-policy" target="_blank" rel="noopener noreferrer">whatsapp.com/legal/privacy-policy</a>.</p>
+    <p>Os botões de WhatsApp abrem uma conversa com a mensagem já escrita sobre o assunto (imóvel, avaliação, permuta ou atendimento). A partir daí a conversa acontece no WhatsApp, da Meta, e segue a política deles: <a href="https://www.whatsapp.com/legal/privacy-policy" target="_blank" rel="noopener noreferrer">whatsapp.com/legal/privacy-policy</a>.</p>
     <p>O que você contar nessa conversa ou numa ligação — nome, telefone e o que disser sobre o imóvel — é usado só para responder e conduzir o atendimento que você pediu. Se houver negócio, os dados do contrato ficam pelo tempo que o contrato e a lei exigirem. A imobiliária não vende esses dados.</p>
     <p>A ligação para (14) 98106-6430 passa pela operadora de telefone. O corretor usa a chamada para o mesmo atendimento.</p>
 
     <h2>Links para fora</h2>
     <p>O endereço abre o Google Maps e o Instagram abre o perfil joseamimalexandre. Esses sites têm política própria. Clicar neles tira você deste site; a imobiliária não recebe um cadastro só por causa do clique.</p>
+
+    <h2>Canal de contato</h2>
+    <p>Para falar sobre os seus dados, use o WhatsApp ou o telefone (14) 98106-6430, ou escreva para o endereço Rua São Paulo, 309 - Centro, Conchas - SP, em nome de José Amim Alexandre.</p>
 
     <h2>Seus direitos</h2>
     <p>Pela Lei Geral de Proteção de Dados, você pode pedir:</p>
@@ -86,7 +115,7 @@
     <p>O pedido sai pelo WhatsApp ou pelo telefone (14) 98106-6430, em nome de José Amim Alexandre. Se a resposta não resolver, cabe reclamação à Autoridade Nacional de Proteção de Dados.</p>
 
     <h2>Atualização</h2>
-    <p>Se o site passar a guardar cadastro, formulário ou estatística de visita, esta página será reescrita para contar isso. A data no início mostra a versão em vigor.</p>
+    <p>Se a forma de tratar os dados mudar, esta página será reescrita. A data no início mostra a versão em vigor.</p>
   </main>
 
   <footer class="contato" id="contato">
@@ -96,32 +125,32 @@
           <img src="assets/logo-marca.png" alt="Imobiliária José Amim Alexandre" width="131" height="56">
         </a>
         <p>Corretor de imóveis CRECI 31.552-F</p>
-        <p>Mais de 40 anos no mercado em Conchas.</p>
       </div>
       <div>
         <h3>Endereço</h3>
-        <p><a href="https://maps.google.com/?q=Rua+S%C3%A3o+Paulo,+309+-+Centro,+Conchas+-+SP">Rua São Paulo, 309 - Centro, Conchas - SP</a></p>
-        <p><a href="tel:+5514981066430">(14) 98106-6430</a></p>
+        <p><a href="https://www.google.com/maps/search/?api=1&query=Rua+S%C3%A3o+Paulo%2C+309+-+Centro%2C+Conchas+-+SP" target="_blank" rel="noopener noreferrer">Rua São Paulo, 309 - Centro, Conchas - SP</a></p>
         <p><a class="zap" href="https://wa.me/5514981066430?text=Ol%C3%A1%2C%20quero%20falar%20com%20a%20imobili%C3%A1ria." target="_blank" rel="noopener noreferrer">WhatsApp</a></p>
+        <p><a class="ligar" href="tel:+5514981066430">Ligar (14) 98106-6430</a></p>
       </div>
       <div>
         <h3>No site</h3>
-        <p><a href="index.html#comprar">Comprar</a></p>
-        <p><a href="index.html#alugar">Alugar</a></p>
-        <p><a href="index.html#anunciar">Anunciar imóvel</a></p>
-        <p><a href="index.html#financiamento">Financiamento</a></p>
+        <p><a href="comprar.html">Comprar</a></p>
+        <p><a href="alugar.html">Alugar</a></p>
+        <p><a href="anunciar.html">Anunciar imóvel</a></p>
         <p><a href="index.html#imobiliaria">Sobre nós</a></p>
         <p><a href="index.html#contato">Contato</a></p>
       </div>
       <div>
         <h3>Instagram</h3>
-        <p><a href="https://www.instagram.com/joseamimalexandre/" target="_blank" rel="noopener">joseamimalexandre</a></p>
+        <p><a class="instagram" href="https://www.instagram.com/joseamimalexandre/" target="_blank" rel="noopener">joseamimalexandre</a></p>
       </div>
     </div>
     <div class="miolo direitos">
-      <p>© 2026 Imobiliária José Amim Alexandr<span class="marca-e" title="Marca registrada">e</span>. Todos os direitos reservados.</p>
-      <p><a href="politica-de-privacidade.html">Política de privacidade</a></p>
-      <p>Desenvolvido por <a href="https://www.msdigitais.com.br" target="_blank" rel="noopener noreferrer">www.msdigitais.com.br</a></p>
+      <div class="direitos__legal">
+        <p>© 2026 Imobiliária José Amim Alexandr<span class="marca-e" title="Marca registrada">e</span>. Todos os direitos reservados.</p>
+        <p><a href="politica-de-privacidade.html">Política de privacidade</a></p>
+      </div>
+      <p class="credito">Desenvolvido por <a href="https://www.msdigitais.com.br" target="_blank" rel="noopener noreferrer">MS Digitais</a></p>
     </div>
   </footer>
 
@@ -144,20 +173,24 @@
     function fecharMenu() {
       botao.setAttribute("aria-expanded", "false");
       gaveta.hidden = true;
+      document.body.classList.remove("menu-aberto");
+    }
+
+    function abrirMenu() {
+      botao.setAttribute("aria-expanded", "true");
+      gaveta.hidden = false;
+      document.body.classList.add("menu-aberto");
     }
 
     botao.addEventListener("click", () => {
-      const aberto = botao.getAttribute("aria-expanded") === "true";
-      botao.setAttribute("aria-expanded", String(!aberto));
-      gaveta.hidden = aberto;
+      if (botao.getAttribute("aria-expanded") === "true") fecharMenu();
+      else abrirMenu();
     });
     gaveta.addEventListener("click", (evento) => {
-      if (evento.target.closest("a")) fecharMenu();
+      if (evento.target === gaveta || evento.target.closest("a") || evento.target.closest(".gaveta__fechar")) fecharMenu();
     });
-    document.addEventListener("click", (evento) => {
-      if (gaveta.hidden) return;
-      if (evento.target.closest(".gaveta") || evento.target.closest(".menu-botao")) return;
-      fecharMenu();
+    document.addEventListener("keydown", (evento) => {
+      if (evento.key === "Escape" && !gaveta.hidden) fecharMenu();
     });
   </script>
   <a class="whatsapp" href="https://wa.me/5514981066430?text=Ol%C3%A1%2C%20quero%20falar%20com%20a%20imobili%C3%A1ria." target="_blank" rel="noopener noreferrer" aria-label="Abrir 1 mensagem no WhatsApp">
@@ -165,5 +198,10 @@
       <path fill="#fff" d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.435 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413z"/>
     </svg>
   </a>
+  <div class="cookies" id="cookies" role="region" aria-label="Aviso de cookies" hidden>
+    <p>Usamos cookies funcionais e de navegação para o site funcionar e lembrar esta escolha. <a href="politica-de-privacidade.html">Política de Privacidade</a></p>
+    <button class="cookies__aceitar" type="button">Aceitar Todos</button>
+  </div>
+  <script src="cookies.js"></script>
 </body>
 </html>
