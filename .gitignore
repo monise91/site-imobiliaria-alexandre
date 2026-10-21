@@ -1,2 +1,5 @@
 crm/config.php
 build/crm/config.php
+node_modules/
+dist/
+public/assets

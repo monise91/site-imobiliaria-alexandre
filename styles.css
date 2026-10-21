@@ -261,7 +261,7 @@ body.menu-aberto {
   place-items: center;
   overflow: hidden;
   padding: clamp(4.5rem, 10vh, 6.5rem) clamp(0.85rem, 3vw, 1.25rem) clamp(0.75rem, 4vh, 3.5rem);
-  background: #1a1714 url("assets/fundo_hero.png") center 45% / cover no-repeat;
+  background: #1a1714 url("/assets/fundo_hero.png") center 45% / cover no-repeat;
 }
 
 .hero__fundo {
@@ -341,6 +341,18 @@ h1 {
   text-shadow: 0 2px 18px rgba(0, 0, 0, 0.5);
 }
 
+.selo-comparar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: clamp(0.7rem, 2vw, 1.4rem);
+  margin: clamp(1.2rem, 4vh, 2.4rem) 0 0;
+}
+
+.selo-comparar .selo-anos {
+  margin: 0;
+}
+
 .selo-anos {
   --selo: calc(150px - 0.5cm);
   position: relative;
@@ -373,6 +385,23 @@ h1 {
   font-weight: 700;
   letter-spacing: 0.04em;
   text-transform: uppercase;
+}
+
+.selo-anos__arco--frase {
+  font-size: 6.4px;
+  letter-spacing: 0.008em;
+}
+
+.selo-comparar .selo-anos__arco {
+  fill: #101448;
+  font-size: 9px;
+  font-weight: 800;
+  letter-spacing: 0.03em;
+}
+
+.selo-comparar .selo-anos__arco--frase {
+  font-size: 7.6px;
+  letter-spacing: 0.02em;
 }
 
 .selo-anos__num {
@@ -437,6 +466,18 @@ h1 {
   font-size: 0.48em;
   font-weight: 500;
   line-height: 1;
+}
+
+.hero .apoio .marca-e,
+.contato__nome .marca-e {
+  margin-right: 0.95em;
+}
+
+.hero .apoio .marca-e::after,
+.contato__nome .marca-e::after {
+  top: -0.22em;
+  font-size: 1.08em;
+  font-weight: 700;
 }
 
 .busca {
@@ -937,6 +978,12 @@ a:focus-visible {
   margin-top: 1.5rem;
 }
 
+@media (min-width: 900px) {
+  .servicos {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
 .servicos article {
   padding: 1.3rem 1.2rem 1.4rem;
   background: var(--cinza-claro);
@@ -1004,12 +1051,24 @@ a:focus-visible {
 
 .contato__grade {
   display: grid;
-  grid-template-columns: 1.4fr 1fr 1fr 0.8fr;
+  grid-template-columns: minmax(0, 1.3fr) minmax(0, 1fr) minmax(0, 0.9fr) minmax(15.5rem, 1fr);
   gap: 1.5rem;
+}
+
+.contato p.contato__acoes {
+  margin-top: 0.95rem;
 }
 
 .contato p + p {
   margin-top: 0.35rem;
+}
+
+.contato p.contato__nome {
+  margin-top: 0.7rem;
+}
+
+.contato h3.contato__horario {
+  margin-top: 1.25rem;
 }
 
 .contato a.ligar {
@@ -1032,20 +1091,30 @@ a:focus-visible {
   text-decoration: none;
 }
 
-.contato a.instagram {
+.contato a.instagram,
+.contato a.facebook {
   display: inline-flex;
   align-items: center;
   gap: 0.4rem;
 }
 
-.contato a.instagram::before {
+.contato a.instagram::before,
+.contato a.facebook::before {
   content: "";
   width: 15px;
   height: 15px;
   flex: none;
   background: #fff;
+}
+
+.contato a.instagram::before {
   -webkit-mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath fill='black' d='M12 2.2c3.2 0 3.6 0 4.8.1 3.3.1 4.8 1.7 4.9 4.9.1 1.3.1 1.6.1 4.8s0 3.6-.1 4.8c-.1 3.3-1.7 4.8-4.9 4.9-1.3.1-1.6.1-4.8.1s-3.6 0-4.8-.1c-3.3-.1-4.8-1.7-4.9-4.9-.1-1.3-.1-1.6-.1-4.8s0-3.6.1-4.8C2.4 3.9 3.9 2.4 7.2 2.3 8.4 2.2 8.8 2.2 12 2.2zM12 0C8.7 0 8.3 0 7.1.1 2.7.3.3 2.7.1 7.1 0 8.3 0 8.7 0 12s0 3.7.1 4.9c.2 4.4 2.6 6.8 7 7 1.2.1 1.6.1 4.9.1s3.7 0 4.9-.1c4.4-.2 6.8-2.6 7-7 .1-1.2.1-1.6.1-4.9s0-3.7-.1-4.9c-.2-4.4-2.6-6.8-7-7C15.7 0 15.3 0 12 0zm0 5.8a6.2 6.2 0 1 0 0 12.4 6.2 6.2 0 0 0 0-12.4zM12 16a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm6.4-11.8a1.4 1.4 0 1 0 0 2.9 1.4 1.4 0 0 0 0-2.9z'/%3E%3C/svg%3E") center / contain no-repeat;
   mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath fill='black' d='M12 2.2c3.2 0 3.6 0 4.8.1 3.3.1 4.8 1.7 4.9 4.9.1 1.3.1 1.6.1 4.8s0 3.6-.1 4.8c-.1 3.3-1.7 4.8-4.9 4.9-1.3.1-1.6.1-4.8.1s-3.6 0-4.8-.1c-3.3-.1-4.8-1.7-4.9-4.9-.1-1.3-.1-1.6-.1-4.8s0-3.6.1-4.8C2.4 3.9 3.9 2.4 7.2 2.3 8.4 2.2 8.8 2.2 12 2.2zM12 0C8.7 0 8.3 0 7.1.1 2.7.3.3 2.7.1 7.1 0 8.3 0 8.7 0 12s0 3.7.1 4.9c.2 4.4 2.6 6.8 7 7 1.2.1 1.6.1 4.9.1s3.7 0 4.9-.1c4.4-.2 6.8-2.6 7-7 .1-1.2.1-1.6.1-4.9s0-3.7-.1-4.9c-.2-4.4-2.6-6.8-7-7C15.7 0 15.3 0 12 0zm0 5.8a6.2 6.2 0 1 0 0 12.4 6.2 6.2 0 0 0 0-12.4zM12 16a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm6.4-11.8a1.4 1.4 0 1 0 0 2.9 1.4 1.4 0 0 0 0-2.9z'/%3E%3C/svg%3E") center / contain no-repeat;
+}
+
+.contato a.facebook::before {
+  -webkit-mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath fill='black' d='M24 12.073C24 5.405 18.627 0 12 0S0 5.405 0 12.073C0 18.1 4.388 23.094 10.125 24v-8.437H7.078v-3.49h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.49h-2.796V24C19.612 23.094 24 18.1 24 12.073z'/%3E%3C/svg%3E") center / contain no-repeat;
+  mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath fill='black' d='M24 12.073C24 5.405 18.627 0 12 0S0 5.405 0 12.073C0 18.1 4.388 23.094 10.125 24v-8.437H7.078v-3.49h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.49h-2.796V24C19.612 23.094 24 18.1 24 12.073z'/%3E%3C/svg%3E") center / contain no-repeat;
 }
 
 .direitos {
@@ -2301,6 +2370,18 @@ a:focus-visible {
   font-size: 1.05rem;
 }
 
+.explore__destaque {
+  display: block;
+  margin: 0.85rem 0 0;
+  padding: 0.75rem 1rem;
+  border-left: 4px solid var(--azul);
+  background: var(--cinza-claro);
+  color: var(--azul);
+  font-size: 1.15rem;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+}
+
 .esteira {
   position: relative;
 }
@@ -2702,9 +2783,19 @@ a.categoria:focus-visible .categoria__ir {
 }
 
 .servicos article {
+  display: flex;
+  flex-direction: column;
   background: #fff;
   border-radius: 12px;
   box-shadow: 0 10px 28px rgba(16, 18, 48, 0.08);
+}
+
+.servicos article p {
+  margin-bottom: 0.9rem;
+}
+
+.servicos a.zap {
+  align-self: flex-start;
 }
 
 .servicos a:hover,
@@ -2888,6 +2979,10 @@ a.zap:focus-visible,
   margin-top: 0;
 }
 
+.servicos a.zap {
+  margin-top: auto;
+}
+
 .topo a.zap {
   padding: 0.48rem 0.8rem;
   font-size: 0.9rem;
@@ -2980,6 +3075,16 @@ a.zap:focus-visible,
     margin: 0.15rem 0 0.2rem;
   }
 
+  .hero .selo-comparar {
+    margin: 0.15rem 0 0.2rem;
+    gap: 0.32rem;
+  }
+
+  .hero .selo-comparar .selo-anos {
+    --selo: min(96px, calc((100vw - 3.6rem) / 4));
+    margin: 0;
+  }
+
   .hero .apoio {
     margin: 0;
     font-size: clamp(0.82rem, 2.1vh, 1.15rem);
@@ -3013,6 +3118,15 @@ a.zap:focus-visible,
     font-size: clamp(0.68rem, 2.8vw, 0.82rem);
   }
 
+  .hero .pills {
+    gap: 0.28rem;
+  }
+
+  .hero .pills a {
+    padding: 0.32rem 0.4rem;
+    font-size: 0.68rem;
+  }
+
   .hero a.zap {
     margin-top: 0.4rem;
   }
@@ -3040,6 +3154,14 @@ a.zap:focus-visible,
 
   .hero .selo-anos {
     margin: 0.35rem 0 0.55rem;
+  }
+
+  .hero .selo-comparar {
+    margin: 0.35rem 0 0.55rem;
+  }
+
+  .hero .selo-comparar .selo-anos {
+    margin: 0;
   }
 
   .hero h1 {
