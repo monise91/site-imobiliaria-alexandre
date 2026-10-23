@@ -332,7 +332,7 @@ h1 {
 
 .hero h1 {
   margin: clamp(0.35rem, 1.5vh, 0.85rem) 0 0;
-  max-width: 16ch;
+  max-width: 24ch;
   color: var(--branco);
   font-size: clamp(1.4rem, 4.8vw, 3.4rem);
   font-weight: 700;
@@ -345,12 +345,22 @@ h1 {
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: clamp(0.7rem, 2vw, 1.4rem);
+  gap: clamp(0.4rem, 1vw, 0.7rem);
   margin: clamp(1.2rem, 4vh, 2.4rem) 0 0;
 }
 
 .selo-comparar .selo-anos {
+  --selo: 92px;
   margin: 0;
+}
+
+.selo-anos--moldura .selo-anos__num,
+.selo-anos--moldura .selo-anos__palavra,
+.selo-anos--moeda .selo-anos__num,
+.selo-anos--moeda .selo-anos__palavra,
+.selo-anos--estrelas .selo-anos__num,
+.selo-anos--estrelas .selo-anos__palavra {
+  fill: #f6dc80;
 }
 
 .selo-anos {
@@ -404,6 +414,56 @@ h1 {
   letter-spacing: 0.02em;
 }
 
+.selo-comparar .selo-anos--onda .selo-anos__arco,
+.selo-comparar .selo-anos--moldura .selo-anos__arco {
+  fill: #0b1038;
+  stroke: #fff8dc;
+  stroke-width: 2.4px;
+  stroke-linejoin: round;
+  paint-order: stroke fill;
+}
+
+.selo-comparar .selo-anos--moeda .selo-anos__arco {
+  fill: #fffef4;
+  stroke: #12163a;
+  stroke-width: 2.4px;
+  stroke-linejoin: round;
+  paint-order: stroke fill;
+}
+
+.selo-anos--raio .selo-anos__num,
+.selo-anos--raio .selo-anos__palavra,
+.selo-anos--raio .selo-anos__legenda,
+.selo-anos--raio .selo-anos__cima {
+  fill: #1a1408;
+}
+
+.selo-anos--raio .selo-anos__num {
+  font-size: 22px;
+}
+
+.selo-anos--raio .selo-anos__palavra {
+  font-family: "Segoe Script", "Brush Script MT", cursive;
+  font-size: 8px;
+  font-weight: 400;
+  letter-spacing: 0;
+  text-transform: none;
+}
+
+.selo-anos--raio .selo-anos__cima {
+  font-size: 6px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.selo-anos--raio .selo-anos__legenda {
+  font-size: 4.7px;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+}
+
 .selo-anos__num {
   fill: #fff;
   font-size: 28px;
@@ -446,11 +506,16 @@ h1 {
 }
 
 .hero .apoio {
-  margin: clamp(0.25rem, 1.1vh, 0.7rem) 0 0;
+  margin: clamp(0.35rem, 1.2vh, 0.8rem) 0 0.25rem;
+  padding: 0.28rem 1.1rem 0.34rem;
+  border: 1.5px solid #e8c872;
+  border-radius: 999px;
+  background: rgba(46, 49, 146, 0.92);
   color: #fff;
-  font-size: clamp(0.92rem, 2vw, 1.2rem);
-  font-weight: 500;
-  text-shadow: 0 1px 10px rgba(0, 0, 0, 0.55);
+  font-size: clamp(1.35rem, 2.9vw, 1.95rem);
+  font-weight: 700;
+  text-shadow: 0 2px 14px rgba(0, 0, 0, 0.68);
+  box-shadow: 0 6px 18px rgba(8, 12, 32, 0.45);
 }
 
 .marca-e {
@@ -470,13 +535,13 @@ h1 {
 
 .hero .apoio .marca-e,
 .contato__nome .marca-e {
-  margin-right: 0.95em;
+  margin-right: 0.72em;
 }
 
 .hero .apoio .marca-e::after,
 .contato__nome .marca-e::after {
-  top: -0.22em;
-  font-size: 1.08em;
+  top: -0.04em;
+  font-size: 0.78em;
   font-weight: 700;
 }
 
@@ -3061,7 +3126,7 @@ a.zap:focus-visible,
 
   .hero h1 {
     margin: 0;
-    font-size: clamp(1.4rem, 6.4vw, 1.85rem);
+    font-size: clamp(1.3rem, 5.8vw, 1.85rem);
   }
 
   .selo-anos {
@@ -3076,18 +3141,20 @@ a.zap:focus-visible,
   }
 
   .hero .selo-comparar {
+    flex-wrap: wrap;
+    width: min(100%, 22rem);
     margin: 0.15rem 0 0.2rem;
-    gap: 0.32rem;
+    gap: 0.35rem;
   }
 
   .hero .selo-comparar .selo-anos {
-    --selo: min(96px, calc((100vw - 3.6rem) / 4));
+    --selo: min(72px, calc((100vw - 3.2rem) / 4));
     margin: 0;
   }
 
   .hero .apoio {
     margin: 0;
-    font-size: clamp(0.82rem, 2.1vh, 1.15rem);
+    font-size: clamp(1.05rem, 3.8vw, 1.35rem);
   }
 
   .busca {
@@ -3171,7 +3238,7 @@ a.zap:focus-visible,
 
   .hero .apoio {
     margin-top: 0.15rem;
-    font-size: 0.85rem;
+    font-size: 1.05rem;
   }
 
   .busca {
