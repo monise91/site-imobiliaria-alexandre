@@ -319,6 +319,7 @@ body.menu-aberto {
   align-items: center;
   width: min(1140px, 100%);
   text-align: center;
+  transform-origin: top center;
 }
 
 h1 {
@@ -390,26 +391,14 @@ h1 {
 }
 
 .selo-anos__arco {
-  fill: var(--azul);
-  font-size: 7.5px;
-  font-weight: 700;
-  letter-spacing: 0.04em;
-  text-transform: uppercase;
-}
-
-.selo-anos__arco--frase {
-  font-size: 6.4px;
-  letter-spacing: 0.008em;
-}
-
-.selo-comparar .selo-anos__arco {
   fill: #101448;
   font-size: 9px;
   font-weight: 800;
   letter-spacing: 0.03em;
+  text-transform: uppercase;
 }
 
-.selo-comparar .selo-anos__arco--frase {
+.selo-anos__arco--frase {
   font-size: 7.6px;
   letter-spacing: 0.02em;
 }
@@ -502,6 +491,20 @@ h1 {
   }
   50% {
     transform: translateY(-5px);
+  }
+}
+
+.hero .selo-anos {
+  animation-name: selo-flutua-hero;
+}
+
+@keyframes selo-flutua-hero {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-12px);
   }
 }
 
@@ -2436,7 +2439,11 @@ a:focus-visible {
 }
 
 .explore__destaque {
-  display: block;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.65rem 1rem;
   margin: 0.85rem 0 0;
   padding: 0.75rem 1rem;
   border-left: 4px solid var(--azul);
@@ -2445,6 +2452,27 @@ a:focus-visible {
   font-size: 1.15rem;
   font-weight: 700;
   letter-spacing: 0.02em;
+}
+
+.explore__destaque p {
+  flex: 1 1 22rem;
+  margin: 0;
+}
+
+.explore__botao {
+  flex: none;
+  padding: 0.62rem 1.15rem;
+  border-radius: 999px;
+  background: var(--azul);
+  color: #fff;
+  font-size: 0.95rem;
+  letter-spacing: 0;
+  text-decoration: none;
+}
+
+.explore__botao:hover,
+.explore__botao:focus-visible {
+  background: var(--azul-claro);
 }
 
 .esteira {
@@ -3266,6 +3294,58 @@ a.zap:focus-visible,
   }
 }
 
+@media (max-height: 520px) and (min-width: 560px) {
+  .hero .selo-anos {
+    --selo: 62px;
+    margin: 0.8rem 0 0.15rem;
+  }
+
+  .hero h1 {
+    margin-top: 0;
+    font-size: 1.15rem;
+  }
+
+  .hero .apoio {
+    margin: 0.2rem 0 0;
+    padding: 0.12rem 0.85rem 0.16rem;
+    font-size: 0.95rem;
+  }
+
+  #busca-hero .busca__barra {
+    flex-wrap: nowrap;
+  }
+
+  #busca-hero .busca__campos {
+    width: auto;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+
+  #busca-hero .busca__cta {
+    width: auto;
+    margin-top: 1.05rem;
+  }
+
+  #busca-hero .busca__abrir {
+    margin: 0.1rem 0 0.3rem 0.7rem;
+  }
+}
+
+@media (max-width: 380px) {
+  .hero .apoio {
+    padding-inline: 0.75rem;
+    font-size: 0.98rem;
+  }
+
+  .hero .pills {
+    gap: 0.2rem;
+  }
+
+  .hero .pills a {
+    padding: 0.3rem 0.32rem;
+    font-size: 0.62rem;
+  }
+}
+
 .capta__acoes {
   align-items: center;
 }
@@ -3359,10 +3439,19 @@ a.zap:focus-visible,
   margin: 0;
 }
 
-.pagina-anunciar .anuncio {
+.pagina-anunciar .anuncio,
+.anuncio--procura {
   margin-top: 1rem;
   border: 1px solid var(--cinza-borda);
   box-shadow: 0 10px 28px rgba(33, 37, 41, 0.06);
+}
+
+.procura h2 {
+  margin: 0;
+}
+
+.anuncio--procura .anuncio__aceite {
+  grid-column: 1 / -1;
 }
 
 .anuncio__campos .anuncio__aceite {

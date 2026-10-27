@@ -82,6 +82,73 @@ export function PaginaInicial() {
   }, [navigate, conteudo]);
 
   useEffect(() => {
+    const hero = ref.current?.querySelector(".hero");
+    const miolo = hero?.querySelector(".hero__conteudo");
+    if (!hero || !miolo) return;
+
+    function caber() {
+      miolo.style.transform = "";
+      if (hero.querySelector('#busca-hero[data-modo="avancado"]')) return;
+      const estiloHero = getComputedStyle(hero);
+      const estiloMiolo = getComputedStyle(miolo);
+      const livre = hero.clientHeight - parseFloat(estiloHero.paddingTop) - parseFloat(estiloHero.paddingBottom) - 4;
+      const visiveis = [...miolo.children].filter((filho) => getComputedStyle(filho).display !== "none");
+      let altura = (parseFloat(estiloMiolo.rowGap) || 0) * Math.max(visiveis.length - 1, 0);
+      visiveis.forEach((filho) => {
+        const estilo = getComputedStyle(filho);
+        altura += filho.getBoundingClientRect().height + parseFloat(estilo.marginTop) + parseFloat(estilo.marginBottom);
+      });
+      const escala = Math.min(1, livre / altura, miolo.clientWidth / miolo.scrollWidth);
+      if (escala < 0.995) miolo.style.transform = "scale(" + Math.max(escala, 0.5) + ")";
+    }
+
+    caber();
+    document.fonts?.ready.then(caber);
+    const observador = new ResizeObserver(caber);
+    observador.observe(hero);
+    return () => observador.disconnect();
+  }, [conteudo]);
+
+  useEffect(() => {
+    const procura = ref.current?.querySelector("#procura-imovel");
+    if (!procura) return;
+    const finalidade = procura.querySelector("#procura-finalidade");
+
+    function enviar(evento) {
+      evento.preventDefault();
+      evento.stopPropagation();
+      const desejo = finalidade.options[finalidade.selectedIndex].text;
+      const linhas = ["Olá, estou procurando um imóvel."];
+      procura.querySelectorAll(".anuncio__campos label").forEach((rotulo) => {
+        const campo = rotulo.querySelector("select, input, textarea");
+        if (!campo || campo.type === "checkbox" || !String(campo.value).trim()) return;
+        const nomeCampo = rotulo.childNodes[0].textContent.trim();
+        const texto = campo.tagName === "SELECT" ? campo.options[campo.selectedIndex].text : campo.value.trim();
+        linhas.push(nomeCampo + ": " + texto);
+      });
+      const aviso = procura.querySelector("#procura-aviso");
+      fetch("crm/salvar.php", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          nome: procura.querySelector("#procura-nome").value.trim(),
+          telefone: procura.querySelector("#procura-telefone").value.trim(),
+          origem: "Formulário",
+          assunto: "Procura imóvel: " + desejo,
+          pagina: location.href,
+          detalhes: linhas.join("\n")
+        })
+      }).finally(() => {
+        if (aviso) aviso.hidden = false;
+        window.open("https://wa.me/5514981066430?text=" + encodeURIComponent(linhas.join("\n")), "_blank", "noopener");
+      });
+    }
+
+    procura.addEventListener("submit", enviar, true);
+    return () => procura.removeEventListener("submit", enviar, true);
+  }, [conteudo]);
+
+  useEffect(() => {
     const grupos = [
       document.querySelectorAll(".categorias .categoria"),
       document.querySelectorAll(".marcos li")
