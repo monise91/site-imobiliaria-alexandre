@@ -20,6 +20,12 @@ function crm_corta($texto, $limite)
     return substr($texto, 0, $limite);
 }
 
+function crm_agora()
+{
+    $agora = new DateTime("now", new DateTimeZone("America/Sao_Paulo"));
+    return $agora->format("Y-m-d H:i:s");
+}
+
 function crm_pdo()
 {
     $config = crm_config();

@@ -22,7 +22,7 @@ export function Layout({ children, classeCorpo = "", zap, ocultarZapNoHero = fal
   const [menuAberto, setMenuAberto] = useState(false);
   const [zapOculto, setZapOculto] = useState(ocultarZapNoHero);
   const rodape = useMemo(() => htmlParaReact(rodapeHtml), []);
-  const textoZap = zap || "Olá, quero falar com a imobiliária.";
+  const textoZap = zap || "Olá, quero falar com o corretor.";
   const hrefZap = linkZap(textoZap);
 
   useEffect(() => {
@@ -88,7 +88,10 @@ export function Layout({ children, classeCorpo = "", zap, ocultarZapNoHero = fal
     <>
       <header className="topo">
         <Link className="marca" to="/">
-          <img src="assets/logo-marca.png" alt="Imobiliária José Amim Alexandre" width="131" height="56" />
+          <span className="marca__logo">
+            <img src="assets/logo-marca.png" alt="José Amim Alexandre, corretor de imóveis" width="131" height="56" />
+          </span>
+          <span className="marca__creci">CRECI 31.552-F</span>
         </Link>
         <nav className="menu" aria-label="Principal">
           <Link to="/comprar" aria-current={paginaAtual("/comprar") ? "page" : undefined}>Comprar</Link>
@@ -141,8 +144,8 @@ export function Layout({ children, classeCorpo = "", zap, ocultarZapNoHero = fal
             <Link to="/#contratos">Contratos</Link>
           </div>
           <div className="gaveta__grupo">
-            <p>A imobiliária</p>
-            <Link to="/#imobiliaria">Sobre nós</Link>
+            <p>O escritório</p>
+            <Link to="/#escritorio">Sobre nós</Link>
             <Link to="/#contato">Contato</Link>
             <Link to="/politica-de-privacidade">Política de privacidade</Link>
             <a href="https://www.instagram.com/joseamimalexandre/" target="_blank" rel="noopener noreferrer">Instagram</a>
@@ -151,7 +154,7 @@ export function Layout({ children, classeCorpo = "", zap, ocultarZapNoHero = fal
           <div className="gaveta__grupo">
             <p>Contato</p>
             <a href="tel:+5514981066430">(14) 98106-6430</a>
-            <a className="zap" href={linkZap("Olá, quero falar com a imobiliária.")} target="_blank" rel="noopener noreferrer">WhatsApp</a>
+            <a className="zap" href={linkZap("Olá, quero falar com o corretor.")} target="_blank" rel="noopener noreferrer">WhatsApp</a>
             <a href="https://www.google.com/maps/search/?api=1&query=Rua+S%C3%A3o+Paulo%2C+309+-+Centro%2C+Conchas+-+SP" target="_blank" rel="noopener noreferrer">Rua São Paulo, 309 - Centro, Conchas - SP</a>
           </div>
         </div>

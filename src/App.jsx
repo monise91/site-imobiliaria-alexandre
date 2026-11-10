@@ -14,8 +14,8 @@ function Comprar() {
       html={comprarHtml}
       classeCorpo="pagina-lista"
       zap="Olá, quero saber sobre imóveis à venda em Conchas."
-      titulo="Comprar imóvel · Imobiliária José Amim Alexandre"
-      descricao="Imóveis à venda em Conchas com a Imobiliária José Amim Alexandre. CRECI 31.552-F."
+      titulo="Comprar imóvel · José Amim Alexandre"
+      descricao="Imóveis à venda em Conchas com José Amim Alexandre, corretor de imóveis. CRECI 31.552-F."
     />
   );
 }
@@ -26,8 +26,8 @@ function Alugar() {
       html={alugarHtml}
       classeCorpo="pagina-lista"
       zap="Olá, quero saber sobre imóveis para alugar em Conchas."
-      titulo="Alugar imóvel · Imobiliária José Amim Alexandre"
-      descricao="Imóveis para alugar em Conchas com a Imobiliária José Amim Alexandre. CRECI 31.552-F."
+      titulo="Alugar imóvel · José Amim Alexandre"
+      descricao="Imóveis para alugar em Conchas com José Amim Alexandre, corretor de imóveis. CRECI 31.552-F."
     />
   );
 }
@@ -38,8 +38,8 @@ function Permuta() {
       html={permutaHtml}
       classeCorpo="pagina-lista"
       zap="Olá, quero falar sobre permuta de um imóvel em Conchas."
-      titulo="Permuta de imóvel · Imobiliária José Amim Alexandre"
-      descricao="Permuta de imóveis em Conchas com a Imobiliária José Amim Alexandre. CRECI 31.552-F."
+      titulo="Permuta de imóvel · José Amim Alexandre"
+      descricao="Permuta de imóveis em Conchas com José Amim Alexandre, corretor de imóveis. CRECI 31.552-F."
     />
   );
 }
@@ -49,9 +49,9 @@ function Politica() {
     <PaginaEstatica
       html={politicaHtml}
       classeCorpo="pagina-imovel"
-      zap="Olá, quero falar com a imobiliária."
-      titulo="Política de privacidade · Imobiliária José Amim Alexandre"
-      descricao="Como a Imobiliária José Amim Alexandre, em Conchas, trata os dados de quem visita o site ou chama no WhatsApp e no telefone."
+      zap="Olá, quero falar com o corretor."
+      titulo="Política de privacidade · José Amim Alexandre"
+      descricao="Como o escritório de José Amim Alexandre, em Conchas, trata os dados de quem visita o site ou chama no WhatsApp e no telefone."
     />
   );
 }

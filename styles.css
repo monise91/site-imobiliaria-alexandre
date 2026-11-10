@@ -261,7 +261,7 @@ body.menu-aberto {
   place-items: center;
   overflow: hidden;
   padding: clamp(4.5rem, 10vh, 6.5rem) clamp(0.85rem, 3vw, 1.25rem) clamp(0.75rem, 4vh, 3.5rem);
-  background: #1a1714 url("/assets/fundo_hero.png") center 45% / cover no-repeat;
+  background: #1a1714 url("/assets/fachada.jpeg") center / cover no-repeat;
 }
 
 .hero__fundo {
@@ -272,15 +272,6 @@ body.menu-aberto {
   height: 100%;
   object-fit: cover;
   pointer-events: none;
-}
-
-.hero__video {
-  position: absolute;
-  inset: 0;
-  z-index: 1;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
 }
 
 .hero__a {
@@ -510,9 +501,10 @@ h1 {
 
 .hero .apoio {
   margin: clamp(0.35rem, 1.2vh, 0.8rem) 0 0.25rem;
-  padding: 0.28rem 1.1rem 0.34rem;
+  padding: 0.32rem 1.3rem 0.4rem;
   border: 1.5px solid #e8c872;
-  border-radius: 999px;
+  border-radius: 1.1rem;
+  line-height: 1.15;
   background: rgba(46, 49, 146, 0.92);
   color: #fff;
   font-size: clamp(1.35rem, 2.9vw, 1.95rem);
@@ -534,6 +526,16 @@ h1 {
   font-size: 0.48em;
   font-weight: 500;
   line-height: 1;
+}
+
+.apoio__cargo {
+  display: block;
+  margin-top: 0.12rem;
+  color: #f6e7b4;
+  font-size: 0.62em;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
 }
 
 .hero .apoio .marca-e,
@@ -860,6 +862,10 @@ a:focus-visible {
   line-height: 1.2;
 }
 
+.card .card__preco:empty::before {
+  content: "Valor sob consulta";
+}
+
 .card h3,
 .servicos h3,
 .contato h3 {
@@ -904,8 +910,7 @@ a:focus-visible {
   font-size: 0.88rem;
 }
 
-.tipos,
-.bairros {
+.tipos {
   display: flex;
   flex-wrap: wrap;
   gap: 0.7rem;
@@ -914,8 +919,7 @@ a:focus-visible {
   list-style: none;
 }
 
-.tipos a,
-.bairros a {
+.tipos a {
   display: inline-block;
   padding: 0.9rem 1.1rem;
   border: 1px solid var(--cinza-borda);
@@ -931,9 +935,7 @@ a:focus-visible {
 }
 
 .tipos a:hover,
-.tipos a:focus-visible,
-.bairros a:hover,
-.bairros a:focus-visible {
+.tipos a:focus-visible {
   background: var(--azul);
   color: var(--branco);
   text-decoration: none;
@@ -948,6 +950,13 @@ a:focus-visible {
 
 .sobre .olho--espaco {
   margin-top: 4.5rem;
+}
+
+.sobre__fora {
+  margin: 0.6rem 0 0;
+  color: var(--cinza-escuro);
+  font-size: 1.05rem;
+  font-weight: 500;
 }
 
 .sobre h2 {
@@ -1728,10 +1737,6 @@ a:focus-visible {
 }
 
 @media (prefers-reduced-motion: reduce) {
-  .hero__video {
-    display: none;
-  }
-
   .selo-anos,
   .selo-anos::before,
   .whatsapp::after {
@@ -1804,7 +1809,29 @@ a:focus-visible {
 }
 
 .topo > .marca {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: auto;
   margin-left: 1.6rem;
+  overflow: visible;
+}
+
+.marca__logo {
+  display: block;
+  width: calc(var(--logo-alto) * 1790 / 766);
+  height: calc(var(--logo-alto) * 644 / 766);
+  overflow: hidden;
+}
+
+.marca__creci {
+  margin-top: calc(var(--logo-alto) * 0.02);
+  color: var(--branco);
+  font-size: calc(var(--logo-alto) * 0.19);
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  line-height: 1;
+  white-space: nowrap;
 }
 
 @media (max-width: 720px) {
@@ -2548,10 +2575,17 @@ a.categoria:focus-visible {
   pointer-events: none;
 }
 
+.categoria .foto__marca {
+  z-index: 3;
+  place-items: end;
+  padding: 0.7rem 0.85rem;
+}
+
 .categoria .foto__marca img {
-  width: min(62%, 240px);
-  max-height: 52%;
-  opacity: 0.55;
+  width: min(36%, 150px);
+  max-width: none;
+  max-height: 40%;
+  opacity: 1;
 }
 
 .categoria__corpo {
@@ -2894,11 +2928,6 @@ a.categoria:focus-visible .categoria__ir {
 .servicos a:hover,
 .servicos a:focus-visible {
   color: var(--azul-claro);
-}
-
-.bloco--claro .bairros a {
-  background: var(--cinza-claro);
-  color: var(--cinza-escuro);
 }
 
 @media (max-width: 900px) {
@@ -3644,9 +3673,7 @@ a.zap:focus-visible,
 
 .crm-mini__cancelar,
 .crm-mini__enviar,
-.crm-mini__seguir,
-.crm-login button,
-.crm-pagina .crm-topo a {
+.crm-mini__seguir {
   border: 0;
   border-radius: 999px;
   padding: 0.65rem 1rem;
@@ -3661,8 +3688,7 @@ a.zap:focus-visible,
   color: var(--tinta);
 }
 
-.crm-mini__enviar,
-.crm-login button {
+.crm-mini__enviar {
   background: var(--whatsapp);
   color: var(--branco);
 }
@@ -3677,75 +3703,6 @@ a.zap:focus-visible,
 
 body.crm-mini-aberto {
   overflow: hidden;
-}
-
-.crm-pagina {
-  background: var(--cinza-claro);
-}
-
-.crm-caixa {
-  width: min(46rem, calc(100% - 2rem));
-  margin: 2rem auto 3rem;
-}
-
-.crm-caixa h1,
-.crm-item h2 {
-  margin: 0 0 0.4rem;
-  color: var(--azul);
-}
-
-.crm-login label,
-.crm-item {
-  display: block;
-  margin-top: 1rem;
-  padding: 1rem;
-  border-radius: 14px;
-  background: var(--branco);
-}
-
-.crm-login input {
-  display: block;
-  width: 100%;
-  margin: 0.35rem 0 0.8rem;
-  padding: 0.7rem 0.75rem;
-  border: 1px solid var(--cinza-borda);
-  border-radius: 10px;
-  font: inherit;
-}
-
-.crm-topo {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 1rem;
-}
-
-.crm-pagina .crm-topo a {
-  background: var(--azul);
-  color: var(--branco);
-  text-decoration: none;
-}
-
-.crm-quando {
-  margin: 0;
-  color: var(--cinza);
-  font-size: 0.85rem;
-}
-
-.crm-item p {
-  margin: 0.35rem 0 0;
-  line-height: 1.45;
-}
-
-.crm-item pre {
-  margin: 0.7rem 0 0;
-  white-space: pre-wrap;
-  font: inherit;
-  font-size: 0.92rem;
-}
-
-.crm-erro {
-  color: #9b1c1c;
 }
 
 .cookies__aceitar:hover,

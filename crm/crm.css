@@ -1,0 +1,226 @@
+:root {
+  --azul: #2e3192;
+  --azul-claro: #426ab2;
+  --cinza: #6b7280;
+  --cinza-escuro: #4b5160;
+  --cinza-claro: #e7e9ed;
+  --cinza-borda: #d3d6dc;
+  --tinta: #212529;
+  --branco: #fff;
+  --whatsapp: #25d366;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Roboto, "Segoe UI", sans-serif;
+  color: var(--tinta);
+}
+
+.crm-pagina {
+  background: var(--cinza-claro);
+}
+
+.crm-caixa {
+  width: min(46rem, calc(100% - 2rem));
+  margin: 2rem auto 3rem;
+}
+
+.crm-caixa h1,
+.crm-item h2 {
+  margin: 0 0 0.4rem;
+  color: var(--azul);
+}
+
+.crm-caixa a {
+  color: var(--azul);
+}
+
+.crm-login label,
+.crm-item,
+.crm-novo {
+  display: block;
+  margin-top: 1rem;
+  padding: 1rem;
+  border-radius: 14px;
+  background: var(--branco);
+}
+
+.crm-login input,
+.crm-form input,
+.crm-form select,
+.crm-form textarea,
+.crm-anotar textarea {
+  display: block;
+  width: 100%;
+  margin-top: 0.3rem;
+  padding: 0.65rem 0.75rem;
+  border: 1px solid var(--cinza-borda);
+  border-radius: 10px;
+  background: var(--branco);
+  color: var(--tinta);
+  font: inherit;
+  font-size: 1rem;
+  font-weight: 400;
+}
+
+.crm-login input {
+  margin-bottom: 0.8rem;
+}
+
+.crm-login button,
+.crm-form button,
+.crm-anotar button,
+.crm-topo a {
+  border: 0;
+  border-radius: 999px;
+  padding: 0.65rem 1rem;
+  font: inherit;
+  font-size: 0.92rem;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.crm-login button {
+  background: var(--whatsapp);
+  color: var(--branco);
+}
+
+.crm-form button,
+.crm-anotar button {
+  background: var(--azul);
+  color: var(--branco);
+}
+
+.crm-form button:hover,
+.crm-form button:focus-visible,
+.crm-anotar button:hover,
+.crm-anotar button:focus-visible {
+  background: var(--azul-claro);
+}
+
+.crm-topo {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.crm-caixa .crm-topo a {
+  background: var(--azul);
+  color: var(--branco);
+  text-decoration: none;
+}
+
+.crm-quando {
+  margin: 0;
+  color: var(--cinza);
+  font-size: 0.85rem;
+}
+
+.crm-item p {
+  margin: 0.35rem 0 0;
+  line-height: 1.45;
+}
+
+.crm-item pre {
+  margin: 0.7rem 0 0;
+  white-space: pre-wrap;
+  font: inherit;
+  font-size: 0.92rem;
+}
+
+.crm-erro {
+  color: #9b1c1c;
+}
+
+.crm-ok {
+  padding: 0.6rem 0.8rem;
+  border-radius: 10px;
+  background: #e6f6ec;
+  color: #14632f;
+  font-weight: 700;
+}
+
+.crm-novo summary,
+.crm-anotar summary {
+  color: var(--azul);
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.crm-novo p {
+  margin: 0.6rem 0 0;
+}
+
+.crm-form {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.7rem;
+  margin-top: 0.8rem;
+}
+
+.crm-form label,
+.crm-anotar label {
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: var(--cinza-escuro);
+}
+
+.crm-largo,
+.crm-form button {
+  grid-column: 1 / -1;
+}
+
+.crm-form button {
+  justify-self: start;
+}
+
+.crm-notas {
+  margin-top: 0.9rem;
+  padding-top: 0.8rem;
+  border-top: 1px solid var(--cinza-claro);
+}
+
+.crm-notas h3 {
+  margin: 0 0 0.4rem;
+  color: var(--azul);
+  font-size: 0.95rem;
+}
+
+.crm-notas ul {
+  margin: 0 0 0.6rem;
+  padding: 0;
+  list-style: none;
+}
+
+.crm-notas li {
+  margin-top: 0.45rem;
+  padding: 0.5rem 0.7rem;
+  border-left: 3px solid var(--azul-claro);
+  border-radius: 6px;
+  background: #f4f5f8;
+  line-height: 1.45;
+}
+
+.crm-notas li .crm-quando {
+  display: block;
+  margin-bottom: 0.15rem;
+}
+
+.crm-anotar form {
+  margin-top: 0.6rem;
+}
+
+.crm-anotar button {
+  margin-top: 0.6rem;
+}
+
+@media (max-width: 600px) {
+  .crm-form {
+    grid-template-columns: 1fr;
+  }
+}

@@ -1,0 +1,21 @@
+---
+description: Imóvel sem valor informado mostra "Valor sob consulta"
+alwaysApply: true
+---
+
+# Imóvel sem valor
+
+Quando o dono não informar o valor de um imóvel, o site mostra **"Valor sob consulta"**. Nunca inventar ou estimar valor.
+
+Ao cadastrar o imóvel:
+
+- `src/dados/imoveis.js`: `preco: ""`. A página do imóvel já troca por "Valor sob consulta". Na `descricao`, terminar com `Valor sob consulta.` no lugar de `Valor: R$ ...`.
+- Cards em `src/conteudo/*.html` (home, comprar, alugar, permuta): `data-preco=""` e `<p class="card__preco">Valor sob consulta</p>`.
+- Com `data-preco` vazio, o filtro de valor mínimo/máximo não esconde o card.
+
+```html
+<!-- ❌ -->
+<article class="card" data-preco="0"> ... <p class="card__preco">R$ 0</p>
+<!-- ✅ -->
+<article class="card" data-preco=""> ... <p class="card__preco">Valor sob consulta</p>
+```

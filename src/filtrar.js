@@ -53,8 +53,8 @@ export function filtrarLista(raiz, params) {
     if (!possui(card, "copa", estado.copa)) return false;
     if (!possui(card, "quintal", estado.quintal)) return false;
     const preco = Number(card.dataset.preco);
-    if (estado.minPreco && preco < estado.minPreco) return false;
-    if (estado.maxPreco && preco > estado.maxPreco) return false;
+    if (preco && estado.minPreco && preco < estado.minPreco) return false;
+    if (preco && estado.maxPreco && preco > estado.maxPreco) return false;
     return true;
   }
 

@@ -189,10 +189,10 @@ export function PaginaInicial() {
   }, [conteudo]);
 
   return (
-    <Layout zap="Olá, quero falar com a imobiliária." ocultarZapNoHero>
+    <Layout zap="Olá, quero falar com o corretor." ocultarZapNoHero>
       <Seo
-        titulo="Imobiliária José Amim Alexandre · Mais de 40 anos no mercado"
-        descricao="Imobiliária José Amim Alexandre em Conchas, SP. Mais de 40 anos no mercado. Aluguel, compra, permuta e avaliação. CRECI 31.552-F."
+        titulo="José Amim Alexandre · Corretor de imóveis · Mais de 40 anos no mercado"
+        descricao="José Amim Alexandre, corretor de imóveis em Conchas, SP. Mais de 40 anos no mercado. Aluguel, compra, permuta e avaliação. CRECI 31.552-F."
       />
       <div ref={ref}>{conteudo}</div>
     </Layout>

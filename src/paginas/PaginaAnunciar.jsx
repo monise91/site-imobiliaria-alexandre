@@ -56,8 +56,8 @@ export function PaginaAnunciar() {
   return (
     <Layout classeCorpo="pagina-anunciar" zap="Olá, quero anunciar um imóvel.">
       <Seo
-        titulo="Anuncie seu imóvel · Imobiliária José Amim Alexandre"
-        descricao="Anuncie seu imóvel com a Imobiliária José Amim Alexandre. Venda, aluguel, permuta e avaliação. CRECI 31.552-F."
+        titulo="Anuncie seu imóvel · José Amim Alexandre"
+        descricao="Anuncie seu imóvel com José Amim Alexandre, corretor de imóveis. Venda, aluguel, permuta e avaliação. CRECI 31.552-F."
       />
       <div ref={ref}>{conteudo}</div>
     </Layout>

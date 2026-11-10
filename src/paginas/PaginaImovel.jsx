@@ -35,10 +35,10 @@ export function PaginaImovel() {
 
   if (!imovel) {
     return (
-      <Layout classeCorpo="pagina-imovel" zap="Olá, quero falar com a imobiliária.">
+      <Layout classeCorpo="pagina-imovel" zap="Olá, quero falar com o corretor.">
         <Seo
-          titulo="Imóvel não encontrado · Imobiliária José Amim Alexandre"
-          descricao="Esse anúncio não está na vitrine da Imobiliária José Amim Alexandre, em Conchas."
+          titulo="Imóvel não encontrado · José Amim Alexandre"
+          descricao="Esse anúncio não está na vitrine de José Amim Alexandre, em Conchas."
         />
         <main className="ficha" id="ficha">
           <Link className="voltar" to="/">Voltar à página inicial</Link>
@@ -55,7 +55,8 @@ export function PaginaImovel() {
   const destino = destinos[(imovel.operacao || "").toLowerCase()] || destinos.comprar;
   const textoWhats = "Olá, quero saber sobre " + imovel.titulo + " em " + imovel.cidade + ".";
   const textoVisita = "Olá, quero agendar uma visita a " + imovel.titulo + " em " + imovel.cidade + ".";
-  const textoShare = imovel.titulo + " em " + imovel.cidade + ". " + imovel.preco + ". " + location.href;
+  const preco = imovel.preco || "Valor sob consulta";
+  const textoShare = imovel.titulo + " em " + imovel.cidade + ". " + preco + ". " + location.href;
   const mapa = "https://www.google.com/maps/search/?api=1&query=" + encodeURIComponent(imovel.endereco);
   const unica = imovel.imagens.length < 2;
   const muitas = imovel.imagens.length > 5;
@@ -63,8 +64,8 @@ export function PaginaImovel() {
   const zap = (texto) => "https://wa.me/5514981066430?text=" + encodeURIComponent(texto);
 
   return (
-    <Layout classeCorpo="pagina-imovel" zap="Olá, quero falar com a imobiliária.">
-      <Seo titulo={imovel.titulo + " em " + imovel.cidade + " · Imobiliária José Amim Alexandre"} descricao={resumo} />
+    <Layout classeCorpo="pagina-imovel" zap="Olá, quero falar com o corretor.">
+      <Seo titulo={imovel.titulo + " em " + imovel.cidade + " · José Amim Alexandre"} descricao={resumo} />
       <main className="ficha" id="ficha">
         <Link className="voltar" to="/">Voltar à página inicial</Link>
         <div className="ficha__cabeca">
@@ -77,7 +78,7 @@ export function PaginaImovel() {
           </div>
           <div className="ficha__valor">
             <span>{imovel.operacao}</span>
-            <strong>{imovel.preco}</strong>
+            <strong>{preco}</strong>
           </div>
         </div>
         <div className={unica ? "mosaico mosaico--unica" : "mosaico"}>
@@ -138,7 +139,7 @@ export function PaginaImovel() {
           </div>
           <aside className="ficha__painel">
             <p className="ficha__painel-op">{imovel.operacao}</p>
-            <p className="ficha__painel-preco">{imovel.preco}</p>
+            <p className="ficha__painel-preco">{preco}</p>
             <a className="zap" href={zap(textoWhats)} target="_blank" rel="noopener noreferrer">Falar no WhatsApp</a>
             <a className="ficha__visita" href={zap(textoVisita)} target="_blank" rel="noopener noreferrer">Agende uma visita</a>
             <a className="ficha__ligar" href="tel:+5514981066430">Ligar (14) 98106-6430</a>
